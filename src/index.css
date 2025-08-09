@@ -169,7 +169,7 @@
 
   .animated-traveler {
     @apply absolute w-12 h-12 rounded-full border-4 border-background shadow-xl z-20;
-    background-image: url('/src/assets/cem-headshot.jpg');
+    background-image: url('/src/assets/pic.jpg');
     background-size: cover;
     background-position: center;
     transition: var(--transition-smooth);
