@@ -127,39 +127,41 @@ const JourneyMap = () => {
             onMouseEnter={pauseAnimation}
             onMouseLeave={resumeAnimation}
           >
-            {/* Enhanced Europe Map with better contrast */}
-            <div className="relative w-full h-auto">
+            {/* Europe Map */}
+            <div 
+              className="relative w-full h-auto bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 rounded-2xl overflow-hidden shadow-2xl"
+              style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+              }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent" />
+              
+              {/* Simple SVG Europe outline */}
               <svg
-                viewBox="0 0 1000 600"
-                className="w-full h-auto rounded-2xl shadow-2xl bg-muted border-2 border-border"
+                viewBox="0 0 800 600"
+                className="w-full h-auto relative z-10"
               >
-                {/* Background */}
-                <rect width="1000" height="600" fill="hsl(var(--muted))" />
-                
-                {/* Country borders - simplified Europe outline */}
-                <g stroke="hsl(var(--border))" strokeWidth="2" fill="hsl(var(--card))">
+                {/* European countries in simplified shapes */}
+                <g fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" strokeWidth="1">
                   {/* Germany */}
-                  <path d="M400 150 L480 140 L490 200 L470 250 L420 240 L380 200 Z" />
+                  <path d="M 320 180 L 380 170 L 390 220 L 370 260 L 340 250 L 300 210 Z" />
+                  {/* France */}
+                  <path d="M 200 160 L 300 150 L 310 230 L 280 250 L 220 200 Z" />
+                  {/* Spain */}
+                  <path d="M 160 250 L 280 240 L 290 320 L 180 330 Z" />
+                  {/* Italy */}
+                  <path d="M 350 280 L 420 270 L 450 380 L 380 390 Z" />
+                  {/* Poland */}
+                  <path d="M 380 140 L 480 130 L 490 200 L 390 210 Z" />
                   {/* Turkey */}
-                  <path d="M650 300 L800 290 L820 350 L750 380 L680 360 Z" />
-                  {/* Other European countries - simplified shapes */}
-                  <path d="M200 100 L350 90 L360 180 L300 200 L250 150 Z" /> {/* France */}
-                  <path d="M350 200 L400 180 L450 220 L400 280 L320 260 Z" /> {/* Switzerland/Austria */}
-                  <path d="M450 280 L550 270 L580 350 L480 360 Z" /> {/* Italy */}
-                  <path d="M300 50 L500 40 L520 120 L480 140 L400 130 L350 90 Z" /> {/* Scandinavia */}
+                  <path d="M 520 320 L 650 310 L 670 370 L 540 380 Z" />
+                  {/* UK */}
+                  <path d="M 120 120 L 180 110 L 190 180 L 130 190 Z" />
+                  {/* Scandinavia */}
+                  <path d="M 280 60 L 420 50 L 440 140 L 320 150 Z" />
                 </g>
                 
-                {/* Country labels */}
-                <text x="440" y="200" textAnchor="middle" className="fill-muted-foreground text-sm font-medium">Germany</text>
-                <text x="720" y="330" textAnchor="middle" className="fill-muted-foreground text-sm font-medium">Turkey</text>
-                
-                {/* Grid lines for reference */}
-                <defs>
-                  <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
-                    <path d="M 50 0 L 0 0 0 50" fill="none" stroke="hsl(var(--border))" strokeWidth="0.5" opacity="0.3"/>
-                  </pattern>
-                </defs>
-                <rect width="1000" height="600" fill="url(#grid)" />
+                {/* Cities markers will be positioned over this */}
               </svg>
             </div>
             
