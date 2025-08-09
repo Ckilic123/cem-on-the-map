@@ -17,7 +17,7 @@ const HeroSection = () => {
                 </div>
                 
                 <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-                  Cem Kilic
+                  Hi, my name is Cem
                 </h1>
                 
                 <div className="space-y-4">
@@ -26,9 +26,7 @@ const HeroSection = () => {
                   </h2>
                   
                   <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed max-w-2xl">
-                    Experienced Product Manager specializing in SaaS solutions and cross-functional team leadership. 
-                    I drive product strategy and technical innovation across Europe's leading tech companies. 
-                    Currently based in Munich, focusing on data-driven product decisions and customer satisfaction optimization.
+                    I’m a Product Manager based in Munich, Germany. I have over 5 years’ blended experience in product roles across B2C and B2B. Fluent in English and German.
                   </p>
                 </div>
               </div>
