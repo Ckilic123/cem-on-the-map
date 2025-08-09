@@ -16,8 +16,8 @@ const HeroSection = () => {
                   <span className="text-sm font-medium">Based in Munich, Germany</span>
                 </div>
                 
-                <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-                  Hi,my name is Cem
+                <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+                  Hi! I’m Cem
                 </h1>
                 
                 <div className="space-y-4">
