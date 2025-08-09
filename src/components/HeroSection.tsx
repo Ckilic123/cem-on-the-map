@@ -17,7 +17,7 @@ const HeroSection = () => {
                 </div>
                 
                 <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-                  Hi, my name is Cem
+                  Hi,my name is Cem
                 </h1>
                 
                 <div className="space-y-4">
