@@ -109,6 +109,16 @@ const JourneyMap = () => {
     };
   }, [isPaused, currentLocationIndex]);
 
+  const handleMouseEnter = () => {
+    pauseAnimation();
+  };
+
+  const handleMouseLeave = () => {
+    if (isPaused) {
+      resumeAnimation();
+    }
+  };
+
   return (
     <section id="journey" className="py-20 bg-subtle-gradient">
       <div className="container mx-auto px-6">
@@ -124,25 +134,25 @@ const JourneyMap = () => {
         <div className="max-w-5xl mx-auto">
           <div 
             className="relative animate-scale-in"
-            onMouseEnter={pauseAnimation}
-            onMouseLeave={resumeAnimation}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
-            {/* Europe Map */}
+            {/* Europe Map with proper background and borders */}
             <div 
-              className="relative w-full h-auto bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 rounded-2xl overflow-hidden shadow-2xl"
+              className="relative w-full h-auto bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 rounded-2xl overflow-hidden shadow-2xl min-h-[400px]"
               style={{
                 backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
               }}
             >
               <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent" />
               
-              {/* Simple SVG Europe outline */}
+              {/* Detailed SVG Europe map with borders */}
               <svg
                 viewBox="0 0 800 600"
-                className="w-full h-auto relative z-10"
+                className="w-full h-auto relative z-10 min-h-[400px]"
               >
-                {/* European countries in simplified shapes */}
-                <g fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" strokeWidth="1">
+                {/* European countries with visible borders */}
+                <g fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.6)" strokeWidth="2">
                   {/* Germany */}
                   <path d="M 320 180 L 380 170 L 390 220 L 370 260 L 340 250 L 300 210 Z" />
                   {/* France */}
@@ -159,9 +169,20 @@ const JourneyMap = () => {
                   <path d="M 120 120 L 180 110 L 190 180 L 130 190 Z" />
                   {/* Scandinavia */}
                   <path d="M 280 60 L 420 50 L 440 140 L 320 150 Z" />
+                  {/* Netherlands */}
+                  <path d="M 280 140 L 320 135 L 325 165 L 285 170 Z" />
+                  {/* Switzerland */}
+                  <path d="M 310 240 L 340 235 L 345 260 L 315 265 Z" />
                 </g>
                 
-                {/* Cities markers will be positioned over this */}
+                {/* Country labels */}
+                <g fill="rgba(255,255,255,0.8)" fontSize="12" fontFamily="Arial">
+                  <text x="350" y="200" textAnchor="middle">Germany</text>
+                  <text x="250" y="190" textAnchor="middle">France</text>
+                  <text x="585" y="345" textAnchor="middle">Turkey</text>
+                  <text x="150" y="155" textAnchor="middle">UK</text>
+                  <text x="385" y="325" textAnchor="middle">Italy</text>
+                </g>
               </svg>
             </div>
             
