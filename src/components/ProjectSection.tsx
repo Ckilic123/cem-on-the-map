@@ -84,7 +84,7 @@ const ProjectSection = () => {
             return (
               <div
                 key={project.id}
-                className="project-card animate-fade-in"
+                className="project-card group animate-fade-in"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="relative overflow-hidden rounded-t-xl">

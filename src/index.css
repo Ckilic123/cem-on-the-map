@@ -164,7 +164,7 @@ All colors MUST be HSL.
   }
   
   .project-card {
-    @apply card-elegant overflow-hidden group cursor-pointer;
+    @apply card-elegant overflow-hidden cursor-pointer;
   }
   
   .project-card:hover .project-image {
