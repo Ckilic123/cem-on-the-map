@@ -5,74 +5,84 @@ import cemHeadshot from '@/assets/cem-headshot.jpg';
 
 const HeroSection = () => {
   return (
-    <section className="hero-section min-h-screen flex items-center justify-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary-glow/10" />
-      
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="animate-fade-in">
-            <div className="mb-8 relative inline-block">
-              <img
-                src={cemHeadshot}
-                alt="Cem Kilic - Product Manager"
-                className="w-40 h-40 rounded-full border-4 border-primary-foreground/20 shadow-2xl mx-auto animate-float"
-              />
-              <div className="absolute -bottom-2 -right-2 bg-primary-foreground text-primary px-3 py-1 rounded-full text-sm font-medium flex items-center gap-1">
-                <MapPin className="w-3 h-3" />
-                Munich
+    <section id="hero" className="hero-section min-h-screen flex items-center justify-center pt-16">
+      <div className="container mx-auto px-6 py-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8 animate-fade-in">
+              <div className="space-y-6">
+                <div className="flex items-center gap-3 text-primary-foreground/80">
+                  <MapPin className="w-5 h-5" />
+                  <span className="text-sm font-medium">Based in Munich, Germany</span>
+                </div>
+                
+                <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+                  Cem Kilic
+                </h1>
+                
+                <div className="space-y-4">
+                  <h2 className="text-2xl md:text-3xl font-light text-primary-foreground/90">
+                    Product Manager
+                  </h2>
+                  
+                  <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed max-w-2xl">
+                    Experienced Product Manager specializing in SaaS solutions and cross-functional team leadership. 
+                    I drive product strategy and technical innovation across Europe's leading tech companies. 
+                    Currently based in Munich, focusing on data-driven product decisions and customer satisfaction optimization.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-4">
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  asChild
+                  className="animate-fade-in"
+                  style={{ animationDelay: '0.3s' }}
+                >
+                  <a
+                    href="https://github.com/cemkilic"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    <Github className="w-5 h-5" />
+                    GitHub
+                  </a>
+                </Button>
+                
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  asChild
+                  className="animate-fade-in"
+                  style={{ animationDelay: '0.4s' }}
+                >
+                  <a
+                    href="https://linkedin.com/in/cemkilic"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                    LinkedIn
+                  </a>
+                </Button>
               </div>
             </div>
-            
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-              Cem Kilic
-            </h1>
-            
-            <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 animate-fade-in">
-              Product Manager
-            </p>
-            
-            <div className="prose prose-lg text-primary-foreground/80 mb-12 animate-fade-in max-w-3xl mx-auto">
-              <p className="text-lg leading-relaxed">
-                I'm a Product Manager based in Munich, Germany, with a passion for building impactful digital products that solve real customer problems. 
-                Over the past 5+ years, I've led cross-functional teams across Europe, from fintech innovations in Istanbul to automotive solutions in Berlin and Munich. 
-                I specialize in turning complex challenges into elegant product strategies that drive measurable business outcomes.
-              </p>
-            </div>
-            
-            <div className="flex gap-4 justify-center animate-scale-in">
-              <Button
-                variant="outline"
-                size="lg"
-                className="text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/10 hover:border-primary-foreground/50"
-                asChild
-              >
-                <a
-                  href="https://github.com/cemkilic"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2"
-                >
-                  <Github className="w-5 h-5" />
-                  GitHub
-                </a>
-              </Button>
-              
-              <Button
-                variant="outline"
-                size="lg"
-                className="text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/10 hover:border-primary-foreground/50"
-                asChild
-              >
-                <a
-                  href="https://linkedin.com/in/cemkilic"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2"
-                >
-                  <Linkedin className="w-5 h-5" />
-                  LinkedIn
-                </a>
-              </Button>
+
+            <div className="flex justify-center lg:justify-end animate-scale-in" style={{ animationDelay: '0.2s' }}>
+              <div className="relative">
+                <div className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-primary-foreground/20 shadow-2xl">
+                  <img
+                    src={cemHeadshot}
+                    alt="Cem Kilic - Product Manager"
+                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                  />
+                </div>
+                <div className="absolute inset-0 rounded-full ring-4 ring-primary-foreground/10 animate-pulse-glow" />
+              </div>
             </div>
           </div>
         </div>
