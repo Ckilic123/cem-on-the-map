@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Github, Linkedin, MapPin } from 'lucide-react';
-import cemHeadshot from '@/assets/cem-headshot.jpg';
+import cemHeadshot from '@/assets/pic.jpg';
 
 const HeroSection = () => {
   return (
@@ -60,7 +60,7 @@ const HeroSection = () => {
                   style={{ animationDelay: '0.4s' }}
                 >
                   <a
-                    href="https://linkedin.com/in/cemkilic"
+                    href="https://linkedin.com/in/cem-kilic-pm"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"
