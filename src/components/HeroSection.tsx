@@ -78,7 +78,7 @@ const HeroSection = () => {
                   <img
                     src={cemHeadshot}
                     alt="Cem Kilic - Product Manager"
-                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                    className="w-full h-full object-cover grayscale-0 hover:saturate-150 hover:contrast-125 transition-all duration-500"
                   />
                 </div>
                 <div className="absolute inset-0 rounded-full ring-4 ring-primary-foreground/10 animate-pulse-glow" />
