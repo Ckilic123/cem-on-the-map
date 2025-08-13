@@ -54,78 +54,74 @@ const ProjectSection = () => {
   return (
     <section id="projects" className="py-20 bg-subtle-gradient">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
+        <div className="text-center mb-16 scroll-reveal">
+          <h2 className="text-3xl md:text-4xl font-bold gradient-text">
             Featured Projects
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Discover the impactful products and solutions I've built across different industries and markets.
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className="group card-elegant overflow-hidden hover:scale-105 transition-all duration-300 hover:shadow-2xl animate-fade-in"
+              className="scroll-reveal flex flex-col h-full"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Project Image */}
-              <div className="relative overflow-hidden h-64">
+              {/* Image - Independent and rounded */}
+              <div className="relative overflow-hidden h-56 rounded-2xl shadow-lg mb-6">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-black/10 rounded-2xl" />
               </div>
-
-              {/* Project Content */}
-              <div className="p-6 space-y-4">
-                <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+              
+              {/* Content - Flexible height */}
+              <div className="flex flex-col flex-1 space-y-4">
+                <h3 className="text-xl font-semibold text-foreground">
                   {project.title}
                 </h3>
                 
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed flex-1">
                   {project.description}
                 </p>
-
-                {/* Tech Stack */}
+                
                 <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech) => (
+                  {project.tech.map((tech, index) => (
                     <span
-                      key={tech}
-                      className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-md font-medium"
+                      key={index}
+                      className="px-3 py-1 bg-muted text-muted-foreground text-sm rounded-full"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
-
-                {/* CTA Button */}
-                <div className="pt-4">
+                
+                {/* CTA - Always at bottom */}
+                <div className="mt-auto pt-4">
                   {project.isActive ? (
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      asChild
-                      className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 w-full bg-primary text-primary-foreground hover:bg-primary/90 font-medium py-3 px-6 rounded-lg transition-colors"
                     >
-                      <a href={project.link} className="flex items-center justify-center gap-2">
-                        <ExternalLink className="w-4 h-4" />
-                        View Details
-                      </a>
-                    </Button>
+                      View Details
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
                   ) : (
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      disabled
-                      className="w-full cursor-not-allowed opacity-60"
-                      onClick={scrollToContact}
-                    >
-                      Coming Soon
-                    </Button>
+                    <div className="space-y-2">
+                      <div className="inline-flex items-center justify-center gap-2 w-full bg-muted text-muted-foreground font-medium py-3 px-6 rounded-lg">
+                        Coming Soon
+                      </div>
+                      <button
+                        onClick={scrollToContact}
+                        className="text-primary hover:text-primary/80 text-sm underline w-full text-center transition-colors"
+                      >
+                        Get in touch for details
+                      </button>
+                    </div>
                   )}
                 </div>
               </div>

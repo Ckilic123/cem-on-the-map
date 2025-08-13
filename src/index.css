@@ -178,4 +178,16 @@
   .animated-traveler.paused {
     animation-play-state: paused;
   }
+
+  /* Scroll Reveal Animation */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .scroll-reveal.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

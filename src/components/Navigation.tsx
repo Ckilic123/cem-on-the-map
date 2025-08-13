@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Menu, X, Github, Linkedin } from 'lucide-react';
+import { Menu, X, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Navigation = () => {
@@ -32,12 +32,6 @@ const Navigation = () => {
               Home
             </button>
             <button
-              onClick={() => scrollToSection('journey')}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              Journey
-            </button>
-            <button
               onClick={() => scrollToSection('projects')}
               className="text-foreground hover:text-primary transition-colors"
             >
@@ -57,21 +51,7 @@ const Navigation = () => {
                 asChild
               >
                 <a
-                  href="https://github.com/cemkilic"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="GitHub Profile"
-                >
-                  <Github className="h-5 w-5" />
-                </a>
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                asChild
-              >
-                <a
-                  href="https://linkedin.com/in/cemkilic"
+                  href="https://linkedin.com/in/cem-kilic-pm"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn Profile"
@@ -106,12 +86,6 @@ const Navigation = () => {
                 Home
               </button>
               <button
-                onClick={() => scrollToSection('journey')}
-                className="text-left py-2 text-foreground hover:text-primary transition-colors"
-              >
-                Journey
-              </button>
-              <button
                 onClick={() => scrollToSection('projects')}
                 className="text-left py-2 text-foreground hover:text-primary transition-colors"
               >
@@ -131,21 +105,7 @@ const Navigation = () => {
                   asChild
                 >
                   <a
-                    href="https://github.com/cemkilic"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub Profile"
-                  >
-                    <Github className="h-5 w-5" />
-                  </a>
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  asChild
-                >
-                  <a
-                    href="https://linkedin.com/in/cemkilic"
+                    href="https://linkedin.com/in/cem-kilic-pm"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn Profile"

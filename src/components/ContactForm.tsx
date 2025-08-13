@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { Mail, User, MessageSquare, Send } from 'lucide-react';
+import { Mail, User, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const ContactForm = () => {
@@ -71,18 +71,18 @@ ${formData.email}`;
     <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
+          <div className="text-center mb-16 scroll-reveal">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 gradient-text">
               Let's Connect
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Have a project in mind or want to discuss product opportunities? I'd love to hear from you.
+              Ready to discuss your next project or just want to say hello? I'd love to hear from you.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Contact Info */}
-            <div className="space-y-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="space-y-8 scroll-reveal">
               <h3 className="text-2xl font-bold text-foreground mb-6">Get in Touch</h3>
               
               <div className="space-y-6">
@@ -105,16 +105,6 @@ ${formData.email}`;
                     <p className="text-muted-foreground">Munich, Germany</p>
                   </div>
                 </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MessageSquare className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">Response Time</h4>
-                    <p className="text-muted-foreground">Usually within 24 hours</p>
-                  </div>
-                </div>
               </div>
 
               <div className="pt-6">
@@ -126,7 +116,7 @@ ${formData.email}`;
             </div>
 
             {/* Contact Form */}
-            <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <div className="scroll-reveal">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-2">

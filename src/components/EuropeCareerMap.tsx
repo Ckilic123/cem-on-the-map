@@ -6,11 +6,11 @@ import { geoMercator, geoPath, geoInterpolate } from "d3-geo"
 
 // ---- THEME ---------------------------------------------------------------
 const THEME = {
-  ocean: "#1e40af",       // blue-700
-  land: "#f1f5f9",        // slate-100
-  landStroke: "#0ea5e9",  // sky-500
-  marker: "#f97316",      // orange-500
-  markerHalo: "#3b82f6",  // blue-500
+  ocean: "#334155",       // slate-700 - softer blue-gray
+  land: "#f8fafc",        // slate-50 - very light background
+  landStroke: "#64748b",  // slate-500 - subtle borders
+  marker: "#ea580c",      // orange-600 - vibrant but not overwhelming
+  markerHalo: "#2563eb",  // blue-600 - complementary accent
   text: "#1e293b",        // slate-800
   subtext: "#64748b",     // slate-500
 }
