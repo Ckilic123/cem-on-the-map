@@ -4,6 +4,7 @@ import { Linkedin, FileText, MapPin } from 'lucide-react';
 import cemHeadshot from '@/assets/pic.jpg';
 import EuropeCareerMap from './EuropeCareerMap';
 
+// Force refresh to clear Github reference cache
 const HeroSection = () => {
   return (
     <section id="hero" className="hero-section min-h-screen pt-16">
