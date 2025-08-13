@@ -3,47 +3,47 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Black and White Design System */
+/* Masculine Lively Design System */
 
 @layer base {
   :root {
-    /* Black and White Professional Design System */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 15%;
+    /* Lively Masculine Professional Design System */
+    --background: 220 15% 98%;
+    --foreground: 220 20% 15%;
 
-    --card: 0 0% 98%;
-    --card-foreground: 0 0% 15%;
+    --card: 220 10% 97%;
+    --card-foreground: 220 20% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 15%;
+    --popover: 220 10% 97%;
+    --popover-foreground: 220 20% 15%;
 
-    /* Black and White Theme */
-    --primary: 0 0% 20%;
-    --primary-foreground: 0 0% 98%;
-    --primary-glow: 0 0% 40%;
+    /* Masculine Blue-Orange Theme */
+    --primary: 218 89% 48%;
+    --primary-foreground: 220 15% 98%;
+    --primary-glow: 218 89% 65%;
     
-    --secondary: 0 0% 90%;
-    --secondary-foreground: 0 0% 20%;
+    --secondary: 27 96% 61%;
+    --secondary-foreground: 220 20% 15%;
 
-    --muted: 0 0% 95%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 220 10% 92%;
+    --muted-foreground: 220 15% 45%;
 
-    --accent: 0 0% 85%;
-    --accent-foreground: 0 0% 25%;
+    --accent: 27 96% 95%;
+    --accent-foreground: 27 96% 25%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 220 15% 98%;
 
-    --border: 0 0% 85%;
-    --input: 0 0% 85%;
-    --ring: 0 0% 20%;
+    --border: 220 13% 85%;
+    --input: 220 13% 85%;
+    --ring: 218 89% 48%;
 
     /* Design System Extensions */
-    --hero-gradient: linear-gradient(135deg, hsl(0 0% 20%), hsl(0 0% 40%));
-    --subtle-gradient: linear-gradient(180deg, hsl(0 0% 100%), hsl(0 0% 96%));
-    --card-shadow: 0 4px 20px hsl(0 0% 0% / 0.08);
-    --card-shadow-hover: 0 8px 30px hsl(0 0% 0% / 0.12);
-    --glow-shadow: 0 0 40px hsl(0 0% 40% / 0.15);
+    --hero-gradient: linear-gradient(135deg, hsl(218 89% 48%), hsl(27 96% 61%));
+    --subtle-gradient: linear-gradient(180deg, hsl(220 15% 98%), hsl(220 10% 94%));
+    --card-shadow: 0 4px 20px hsl(218 89% 48% / 0.08);
+    --card-shadow-hover: 0 8px 30px hsl(218 89% 48% / 0.15);
+    --glow-shadow: 0 0 40px hsl(27 96% 61% / 0.25);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -61,40 +61,40 @@
   }
 
   .dark {
-    --background: 0 0% 8%;
-    --foreground: 0 0% 92%;
+    --background: 220 20% 8%;
+    --foreground: 220 15% 92%;
 
-    --card: 0 0% 10%;
-    --card-foreground: 0 0% 92%;
+    --card: 220 20% 10%;
+    --card-foreground: 220 15% 92%;
 
-    --popover: 0 0% 10%;
-    --popover-foreground: 0 0% 92%;
+    --popover: 220 20% 10%;
+    --popover-foreground: 220 15% 92%;
 
-    --primary: 0 0% 80%;
-    --primary-foreground: 0 0% 8%;
-    --primary-glow: 0 0% 75%;
+    --primary: 218 89% 65%;
+    --primary-foreground: 220 20% 8%;
+    --primary-glow: 218 89% 75%;
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 90%;
+    --secondary: 27 96% 55%;
+    --secondary-foreground: 220 20% 8%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 220 20% 15%;
+    --muted-foreground: 220 15% 60%;
 
-    --accent: 0 0% 18%;
-    --accent-foreground: 0 0% 75%;
+    --accent: 220 20% 18%;
+    --accent-foreground: 27 96% 75%;
 
     --destructive: 0 65% 50%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 220 15% 98%;
 
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 0 0% 80%;
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 218 89% 65%;
 
-    --hero-gradient: linear-gradient(135deg, hsl(0 0% 20%), hsl(0 0% 40%));
-    --subtle-gradient: linear-gradient(180deg, hsl(0 0% 8%), hsl(0 0% 10%));
-    --card-shadow: 0 4px 20px hsl(0 0% 0% / 0.3);
-    --card-shadow-hover: 0 8px 30px hsl(0 0% 0% / 0.4);
-    --glow-shadow: 0 0 40px hsl(0 0% 80% / 0.2);
+    --hero-gradient: linear-gradient(135deg, hsl(218 89% 35%), hsl(27 96% 45%));
+    --subtle-gradient: linear-gradient(180deg, hsl(220 20% 8%), hsl(220 20% 10%));
+    --card-shadow: 0 4px 20px hsl(218 89% 48% / 0.15);
+    --card-shadow-hover: 0 8px 30px hsl(218 89% 48% / 0.25);
+    --glow-shadow: 0 0 40px hsl(27 96% 61% / 0.2);
     --sidebar-background: 0 0% 10%;
     --sidebar-foreground: 0 0% 95%;
     --sidebar-primary: 0 0% 80%;

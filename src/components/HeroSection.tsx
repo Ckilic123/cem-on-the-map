@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Github, Linkedin, MapPin } from 'lucide-react';
+import { Linkedin, FileText, MapPin } from 'lucide-react';
 import cemHeadshot from '@/assets/pic.jpg';
+import EuropeCareerMap from './EuropeCareerMap';
 
 const HeroSection = () => {
   return (
