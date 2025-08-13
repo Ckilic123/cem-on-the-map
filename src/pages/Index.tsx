@@ -13,10 +13,10 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       <HeroSection />
-      <div className="py-4">
+      <div className="py-2">
         <ProjectSection />
       </div>
-      <div className="py-4">
+      <div className="py-2">
         <ContactForm />
       </div>
     </div>
