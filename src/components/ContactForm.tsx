@@ -138,7 +138,7 @@ ${formData.email}`;
                       type="email"
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="your@email.com"
+                      placeholder="name@email.com"
                       required
                     />
                   </div>

@@ -6,13 +6,13 @@ import { geoMercator, geoPath, geoInterpolate } from "d3-geo"
 
 // ---- THEME ---------------------------------------------------------------
 const THEME = {
-  ocean: "#334155",       // slate-700 - softer blue-gray
-  land: "#f8fafc",        // slate-50 - very light background
-  landStroke: "#64748b",  // slate-500 - subtle borders
-  marker: "#ea580c",      // orange-600 - vibrant but not overwhelming
-  markerHalo: "#2563eb",  // blue-600 - complementary accent
-  text: "#1e293b",        // slate-800
-  subtext: "#64748b",     // slate-500
+  ocean: "#0f172a",       // slate-900 - deep dark ocean
+  land: "#334155",        // slate-700 - darker land mass
+  landStroke: "#475569",  // slate-600 - visible borders
+  marker: "#f59e0b",      // amber-500 - bright marker
+  markerHalo: "#3b82f6",  // blue-500 - accent
+  text: "#f8fafc",        // slate-50 - light text
+  subtext: "#cbd5e1",     // slate-300 - readable subtext
 }
 
 // Canvas size used by ComposableMap AND the custom d3 projection
