@@ -49,7 +49,7 @@ const HeroSection = () => {
             <div className="lg:col-span-7 space-y-8">
               <div className="space-y-6">
                 <h1 className="text-6xl lg:text-7xl font-bold tracking-tight text-left leading-tight">
-                  Hi! I'm <span className="gradient-text">Cem</span>.
+  Hi! I'm <span className="text-[hsl(var(--secondary))]">Cem</span>.
                 </h1>
                 
                 <h2 className="text-3xl lg:text-4xl font-light text-primary-foreground/90 text-left">
