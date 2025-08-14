@@ -70,7 +70,7 @@ ${formData.email}`;
   return (
     <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 scroll-reveal">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 gradient-text">
               Let's Connect
