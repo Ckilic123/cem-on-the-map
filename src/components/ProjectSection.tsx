@@ -41,8 +41,10 @@ const ProjectSection = () => {
   return (
     <section id="projects" className="pt-6 md:pt-12 pb-20 bg-subtle-gradient">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-8 md:mb-10 scroll-reveal">
+        {/* Title */}
+        <div className="text-center mb-12 md:mb-16 scroll-reveal">
           <h2 className="text-3xl md:text-4xl font-bold gradient-text">Projects</h2>
+          <div className="mx-auto mt-3 h-1 w-16 rounded-full bg-primary/70"></div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
@@ -52,7 +54,7 @@ const ProjectSection = () => {
               className="scroll-reveal group cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Image - Fancy rounded independent item */}
+              {/* Image */}
               <div className="relative overflow-hidden h-64 rounded-3xl shadow-xl mb-8 group-hover:shadow-2xl transition-all duration-500 group-hover:scale-105">
                 <img
                   src={project.image}
@@ -74,7 +76,7 @@ const ProjectSection = () => {
                 </div>
               </div>
 
-              {/* Content - Separate from image */}
+              {/* Content */}
               <div className="space-y-6">
                 <div className="space-y-3">
                   <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
@@ -86,7 +88,7 @@ const ProjectSection = () => {
                   </p>
                 </div>
 
-                {/* CTA - Always positioned consistently */}
+                {/* CTA */}
                 <div className="flex">
                   {project.isActive ? (
                     <a
