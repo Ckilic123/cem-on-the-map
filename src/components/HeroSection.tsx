@@ -121,7 +121,7 @@ const HeroSection = () => {
             <Button
               size="lg"
               onClick={() => setShowMap(true)}
-              className="min-w-[220px] h-14 bg-primary hover:bg-primary/90 text-primary-foreground font-medium text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+              className="min-w-[220px] h-14 bg-primary hover:bg-primary/90 text-primary-foreground font-medium text-lg shadow-lg hover:shadow-xl transition-all duration-300 animate-cta-tilt"
             >
               <Map className="w-6 h-6 mr-3" />
               Have a look at my journey
