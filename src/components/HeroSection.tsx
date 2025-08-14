@@ -102,7 +102,7 @@ const HeroSection = () => {
             {/* Photo */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="w-96 h-96 rounded-3xl overflow-hidden border-2 border-primary/20 shadow-2xl">
+                <div className="w-80 h-80 sm:w-96 sm:h-96 lg:w-[28rem] lg:h-[28rem] rounded-full overflow-hidden border-2 border-primary/20 shadow-2xl">
                   <img
                     src={cemHeadshot}
                     alt="Cem Kilic - Product Manager"
