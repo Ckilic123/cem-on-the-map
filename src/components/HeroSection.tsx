@@ -38,7 +38,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 py-8">
         <div className="max-w-6xl mx-auto">
           {/* Location */}
-          <div className="flex items-center justify-start gap-3 text-primary-foreground/80 mb-8">
+          <div className="flex items-center justify-start gap-3 text-primary-foreground/80 mb-2">
             <MapPin className="w-5 h-5" />
             <span className="text-lg font-medium">Munich, Germany</span>
           </div>
