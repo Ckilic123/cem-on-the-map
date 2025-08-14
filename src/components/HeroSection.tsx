@@ -10,7 +10,7 @@ const HeroSection = () => {
 
   if (showMap) {
     return (
-      <section id="hero" className="hero-section min-h-screen pt-0">
+      <section id="hero" className="hero-section min-h-screen pt-0 pb-0">
         <div className="container mx-auto px-6 py-8">
           <div className="max-w-7xl mx-auto h-[85vh]">
             <div className="h-full rounded-xl overflow-hidden shadow-2xl scroll-reveal">
@@ -23,19 +23,70 @@ const HeroSection = () => {
   }
 
   return (
-    <section id="hero" className="hero-section min-h-screen pt-0 flex items-center justify-center">
+    <section id="hero" className="hero-section min-h-screen pt-0 pb-0 flex items-center justify-center">
       <div className="container mx-auto px-6 py-8">
-        <div className="max-w-4xl mx-auto text-center space-y-12 scroll-reveal">
+        <div className="max-w-6xl mx-auto scroll-reveal">
           {/* Location */}
-          <div className="flex items-center justify-center gap-3 text-primary-foreground/80">
+          <div className="flex items-center justify-center gap-3 text-primary-foreground/80 mb-12">
             <MapPin className="w-5 h-5" />
             <span className="text-lg font-medium">Munich, Germany</span>
           </div>
           
           {/* Photo and Main Content */}
-          <div className="space-y-8">
-            <div className="flex justify-center">
-              <div className="w-48 h-56 rounded-2xl overflow-hidden border border-primary-foreground/20 shadow-xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div className="space-y-6">
+              <h1 className="text-5xl lg:text-6xl font-bold tracking-tight text-left">
+                Hi! I'm Cem.
+              </h1>
+              
+              <h2 className="text-2xl lg:text-3xl font-light text-primary-foreground/90 text-left">
+                Product Manager
+              </h2>
+              
+              <p className="text-lg text-primary-foreground/80 leading-relaxed text-left">
+                I'm a Product Manager based in Munich, Germany. I have over 5 years' blended experience in product roles across B2C and B2B. Fluent in English and German.
+              </p>
+              
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-start items-start pt-4">
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  asChild
+                  className="min-w-[160px]"
+                >
+                  <a
+                    href="https://linkedin.com/in/cem-kilic-pm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                    LinkedIn
+                  </a>
+                </Button>
+                
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  asChild
+                  className="min-w-[160px]"
+                >
+                  <a
+                    href={cemCV}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2"
+                  >
+                    <FileText className="w-5 h-5" />
+                    Resume
+                  </a>
+                </Button>
+              </div>
+            </div>
+            
+            <div className="flex justify-center lg:justify-end">
+              <div className="w-64 h-80 rounded-2xl overflow-hidden border border-primary-foreground/20 shadow-xl">
                 <img
                   src={cemHeadshot}
                   alt="Cem Kilic - Product Manager"
@@ -43,61 +94,10 @@ const HeroSection = () => {
                 />
               </div>
             </div>
-            
-            <div className="space-y-6">
-              <h1 className="text-5xl lg:text-6xl font-bold tracking-tight">
-                Hi! I'm Cem.
-              </h1>
-              
-              <h2 className="text-2xl lg:text-3xl font-light text-primary-foreground/90">
-                Product Manager
-              </h2>
-              
-              <p className="text-lg text-primary-foreground/80 leading-relaxed max-w-2xl mx-auto">
-                I'm a Product Manager based in Munich, Germany. I have over 5 years' blended experience in product roles across B2C and B2B. Fluent in English and German.
-              </p>
-            </div>
-          </div>
-          
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button
-              size="lg"
-              variant="secondary"
-              asChild
-              className="min-w-[160px]"
-            >
-              <a
-                href="https://linkedin.com/in/cem-kilic-pm"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2"
-              >
-                <Linkedin className="w-5 h-5" />
-                LinkedIn
-              </a>
-            </Button>
-            
-            <Button
-              size="lg"
-              variant="secondary"
-              asChild
-              className="min-w-[160px]"
-            >
-              <a
-                href={cemCV}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2"
-              >
-                <FileText className="w-5 h-5" />
-                Resume
-              </a>
-            </Button>
           </div>
           
           {/* Journey CTA */}
-          <div className="pt-8">
+          <div className="text-center">
             <Button
               size="lg"
               onClick={() => setShowMap(true)}

@@ -75,7 +75,7 @@ const ProjectSection = () => {
                 
                 {/* CTA - Always positioned consistently */}
                 <div className="flex">
-                  {project.isActive ? <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 w-full bg-blue-600 text-white hover:bg-blue-700 font-medium py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                  {project.isActive ? <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 w-full bg-primary text-primary-foreground hover:bg-primary/90 font-medium py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                       View Details
                       <ExternalLink className="w-4 h-4" />
                     </a> : <div className="w-full">
