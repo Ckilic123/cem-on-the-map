@@ -38,7 +38,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 py-8">
         <div className="max-w-6xl mx-auto">
           {/* Location */}
-          <div className="flex items-center justify-center gap-3 text-primary-foreground/80 mb-16">
+          <div className="flex items-center justify-start gap-3 text-primary-foreground/80 mb-16">
             <MapPin className="w-5 h-5" />
             <span className="text-lg font-medium">Munich, Germany</span>
           </div>
@@ -102,7 +102,7 @@ const HeroSection = () => {
             {/* Photo */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="w-80 h-96 rounded-3xl overflow-hidden border-2 border-primary/20 shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-300">
+                <div className="w-96 h-96 rounded-3xl overflow-hidden border-2 border-primary/20 shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-300">
                   <img
                     src={cemHeadshot}
                     alt="Cem Kilic - Product Manager"
