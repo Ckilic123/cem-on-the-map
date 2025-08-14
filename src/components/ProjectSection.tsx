@@ -8,8 +8,8 @@ import projectMetro from '@/assets/project-metro.jpg';
 
 const projects = [{
   id: 'carfax',
-  title: 'Data Quality Platform',
-  description: 'Led global SaaS product teams to build advanced data quality and UX solutions, achieving 24% YoY customer satisfaction increase through data-driven insights.',
+  title: 'Remote Advisory @ ING',
+  description: 'Launched Remote Advisory Service boosting investment revenue by 40% and generating €300M+ in deposits through digital transformation.',
   image: projectCarfax,
   link: '/projects/carfax',
   isActive: true,
