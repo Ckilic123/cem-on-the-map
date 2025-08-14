@@ -41,7 +41,7 @@ const HeroSection = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center mb-20">
             {/* Text Content */}
             <div className="lg:col-span-7 space-y-8">
-              {/* Location (inside text column) */}
+              {/* Location */}
               <div className="flex items-center gap-3 text-primary-foreground/80 mb-2">
                 <MapPin className="w-5 h-5" />
                 <span className="text-lg font-medium">Munich, Germany</span>
@@ -102,7 +102,7 @@ const HeroSection = () => {
             {/* Photo */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="w-96 h-[32rem] rounded-3xl overflow-hidden border-2 border-primary/20 shadow-2xl">
+                <div className="w-96 h-96 rounded-full overflow-hidden border-2 border-primary/20 shadow-2xl">
                   <img
                     src={cemHeadshot}
                     alt="Cem Kilic - Product Manager"
