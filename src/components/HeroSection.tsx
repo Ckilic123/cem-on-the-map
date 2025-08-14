@@ -106,7 +106,7 @@ const HeroSection = () => {
                   <img
                     src={cemHeadshot}
                     alt="Cem Kilic - Product Manager"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-center scale-95"
                   />
                 </div>
                 {/* Decorative elements */}
