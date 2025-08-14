@@ -38,7 +38,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 py-8">
         <div className="max-w-6xl mx-auto">
           {/* Main Content - Text Left, Photo Right */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center mb-12">
             {/* Text Content */}
             <div className="lg:col-span-7 space-y-8">
               {/* Location */}
