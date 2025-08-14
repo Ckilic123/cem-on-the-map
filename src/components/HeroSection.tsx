@@ -35,7 +35,7 @@ const HeroSection = () => {
 
   return (
     <section id="hero" className="hero-section min-h-screen pt-0 pb-0 flex items-center justify-center">
-      <div className="container mx-auto px-6 py-8">
+      <div className="container mx-auto px-6 pt-8 pb-4">
         <div className="max-w-6xl mx-auto">
           {/* Main Content - Text Left, Photo Right */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center mb-12">
@@ -106,7 +106,7 @@ const HeroSection = () => {
                   <img
                     src={cemHeadshot}
                     alt="Cem Kilic - Product Manager"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-bottom"
                   />
                 </div>
                 {/* Decorative elements */}
