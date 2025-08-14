@@ -39,7 +39,7 @@ const ProjectSection = () => {
   };
 
   return (
-    <section id="projects" className="pt-6 md:pt-12 pb-20 bg-subtle-gradient">
+    <section id="projects" className="pt-4 md:pt-8 pb-20 bg-subtle-gradient">
       <div className="container mx-auto px-6">
         {/* Title */}
         <div className="text-center mb-12 md:mb-16 scroll-reveal">
