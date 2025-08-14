@@ -13,9 +13,17 @@ const HeroSection = () => {
       <section id="hero" className="hero-section min-h-screen pt-0 pb-0">
         <div className="container mx-auto px-6 py-8">
           <div className="max-w-7xl mx-auto h-[85vh]">
-            <div className="h-full rounded-xl overflow-hidden shadow-2xl scroll-reveal">
-              <EuropeCareerMap />
+            <div className="h-full rounded-xl overflow-hidden shadow-2xl">
+              <EuropeCareerMap key="career-map" />
             </div>
+          </div>
+          <div className="mt-4 text-center">
+            <button
+              onClick={() => setShowMap(false)}
+              className="text-primary-foreground/80 hover:text-primary-foreground text-sm underline"
+            >
+              ← Back to profile
+            </button>
           </div>
         </div>
       </section>
