@@ -190,4 +190,14 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+  @keyframes cta-tilt {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-2deg); }
+    75% { transform: rotate(2deg); }
+  }
+
+  .animate-cta-tilt {
+    animation: cta-tilt 4s ease-in-out infinite;
+  }
 }

@@ -3,7 +3,7 @@ import React from 'react';
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import ProjectSection from '@/components/ProjectSection';
-import ContactForm from '@/components/ContactForm';
+
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 const Index = () => {
@@ -15,9 +15,6 @@ const Index = () => {
       <HeroSection />
       <div className="mt-12">
         <ProjectSection />
-      </div>
-      <div className="-mt-8">
-        <ContactForm />
       </div>
     </div>
   );

@@ -37,12 +37,6 @@ const Navigation = () => {
             >
               Projects
             </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              Contact
-            </button>
             
             <div className="flex items-center space-x-3 ml-6 pl-6 border-l border-border">
               <Button
@@ -90,12 +84,6 @@ const Navigation = () => {
                 className="text-left py-2 text-foreground hover:text-primary transition-colors"
               >
                 Projects
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="text-left py-2 text-foreground hover:text-primary transition-colors"
-              >
-                Contact
               </button>
               
               <div className="flex items-center space-x-3 pt-3 border-t border-border">

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Linkedin, FileText, MapPin, Map } from 'lucide-react';
+import { Linkedin, FileText, MapPin, Map, Mail, Compass } from 'lucide-react';
 import cemHeadshot from '@/assets/pic.jpg';
 import cemCV from '@/assets/Cem_Kilic_CV.pdf';
 import EuropeCareerMap from './EuropeCareerMap';
@@ -96,6 +96,21 @@ const HeroSection = () => {
                     Resume
                   </a>
                 </Button>
+
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  asChild
+                  className="min-w-[160px] h-12"
+                >
+                  <a
+                    href="mailto:cem.klc@yahoo.com"
+                    className="flex items-center justify-center gap-2"
+                  >
+                    <Mail className="w-5 h-5" />
+                    Email
+                  </a>
+                </Button>
               </div>
             </div>
 
@@ -123,7 +138,7 @@ const HeroSection = () => {
               onClick={() => setShowMap(true)}
               className="min-w-[220px] h-14 bg-primary hover:bg-primary/90 text-primary-foreground font-medium text-lg shadow-lg hover:shadow-xl transition-all duration-300 animate-cta-tilt"
             >
-              <Map className="w-6 h-6 mr-3" />
+              <Compass className="w-6 h-6 mr-3 animate-spin-slow" />
               Have a look at my journey
             </Button>
           </div>
