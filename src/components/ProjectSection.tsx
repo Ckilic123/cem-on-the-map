@@ -56,7 +56,7 @@ const projects = [{
     challenge: 'Currency instability was driving customers away from local-currency savings products.',
     solution: 'Launched MVP of FX-protected time deposit across mobile banking and branches, enabling customers to earn high yields without currency risk.',
     results: [
-      '€300M+ in protected deposits'
+      '€300M+ in deposits'
     ]
   }
 }];
