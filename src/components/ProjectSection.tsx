@@ -51,7 +51,7 @@ Assigned drivers automatically receive calendar invites with delivery details.',
 }, {
   id: 'ing-fx',
   title: 'FX Rate Protected Time Deposit Account @ ING',
-  description: 'Launched innovative FX-protected deposit product combining currency hedging with competitive yields for international customers.',
+  description: 'Launched FX-protected deposit product combining currency hedging with competitive yields for international customers.',
   image: projectCarfax,
   tech: ['FinTech', 'Investment Advisory', 'Digital Banking'],
   details: {
