@@ -27,7 +27,7 @@ const projects = [{
 }, {
   id: 'auto1-delivery',
   title: 'Last Mile Delivery Appointments @ AUTO1',
-  description: 'Shipped a self-service tool that automated last mile delivery scheduling and reduced manual coordination, achieving 87% adoption and boosting delivery speed by 11%.',
+  description: 'Shipped a self-service tool that automated last mile delivery scheduling and reduced manual coordination.',
   image: projectAuto1,
   tech: ['Microservices', 'Customer Journey Mapping', 'B2C'],
   details: {
