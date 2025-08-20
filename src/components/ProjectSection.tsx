@@ -155,7 +155,7 @@ const ProjectSection = () => {
       {/* Project Detail Modal */}
       {selectedProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in">
-          <div className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto">
+          <div className="relative w-full max-w-4xl max-h-[85vh] overflow-y-auto my-auto">
             <div className="bg-gradient-to-br from-background to-background/95 rounded-3xl shadow-2xl border border-border/50 animate-scale-in">
               {/* Header */}
               <div className="relative overflow-hidden rounded-t-3xl">
