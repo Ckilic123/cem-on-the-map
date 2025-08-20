@@ -52,7 +52,7 @@ const projects = [{
     company: 'ING Bank',
     duration: '2021 - 2022',
     role: 'Product Owner',
-    impact: '€300M+ deposits,
+    impact: '€300M+ deposits',
     challenge: 'Currency instability was driving customers away from local-currency savings products.',
     solution: 'Launched MVP of FX-protected time deposit across mobile banking and branches, enabling customers to earn high yields without currency risk.',
     results: [
