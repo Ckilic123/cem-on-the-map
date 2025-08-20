@@ -15,7 +15,7 @@ const projects = [{
   details: {
     company: 'ING Bank',
     duration: '2020 - 2021',
-    role: 'Product Owner & Customer Journey Expert',
+    role: 'Customer Journey Expert',
     impact: '40% revenue boost',
     challenge: 'Traditional advisory services were limited to high-net-worth clients, leaving mass and mass affluent segments underserved.',
     solution: 'Developed a digital remote advisory solution on the mobile app for investment products such as stocks and ETFs, combining technology with human expertise.',
@@ -47,7 +47,7 @@ const projects = [{
   title: 'FX Rate Protected Time Deposit Account @ ING',
   description: 'Launched FX-protected time deposit product MVP from 0 to 1 on mobile app and branches.',
   image: projectCarfax,
-  tech: ['FinTech', 'Investment Advisory', 'Digital Banking'],
+  tech: ['MVP', 'Go-to-Market', 'API Integration'],
   details: {
     company: 'ING Bank',
     duration: '2021 - 2022',
@@ -71,10 +71,10 @@ const ProjectSection = () => {
           {/* Title */}
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-6xl lg:text-7xl font-bold tracking-tight text-center leading-tight mb-6">
-              My <span className="text-[hsl(var(--secondary))]">Projects</span>
+              My <span className="text-[hsl(var(--secondary))]">Product Highlights</span>
             </h2>
             <p className="text-xl text-primary-foreground/80 leading-relaxed text-center max-w-2xl mx-auto">
-              Transforming ideas into impactful products across fintech and automotive industries
+              Fast, focused, and validated.
             </p>
           </div>
 
