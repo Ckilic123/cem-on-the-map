@@ -10,19 +10,19 @@ const HeroSection = () => {
 
   if (showMap) {
     return (
-      <section id="hero" className="hero-section min-h-screen pt-0 pb-0">
+      <section id="hero" className="hero-section min-h-screen pt-0 pb-0 transition-all duration-700 ease-in-out">
         <div className="container mx-auto px-6 py-8">
           {/* Move map down by 15% */}
-          <div className="pt-[15vh]">
+          <div className="pt-[15vh] transition-all duration-500 ease-in-out">
             <div className="max-w-7xl mx-auto h-[70vh]">
-              <div className="h-full rounded-xl overflow-hidden shadow-2xl">
+              <div className="h-full rounded-xl overflow-hidden shadow-2xl transition-all duration-500 ease-in-out transform scale-100">
                 <EuropeCareerMap key="career-map" />
               </div>
             </div>
             <div className="mt-4 text-center">
               <button
                 onClick={() => setShowMap(false)}
-                className="text-primary-foreground/80 hover:text-primary-foreground text-sm underline"
+                className="text-primary-foreground/80 hover:text-primary-foreground text-sm underline transition-all duration-300"
               >
                 ← Back to profile
               </button>
@@ -34,8 +34,8 @@ const HeroSection = () => {
   }
 
   return (
-    <section id="hero" className="hero-section min-h-screen pt-0 pb-0 flex items-center justify-center">
-      <div className="container mx-auto px-6 pt-8 pb-4">
+    <section id="hero" className="hero-section min-h-screen pt-0 pb-0 flex items-center justify-center transition-all duration-700 ease-in-out">
+      <div className="container mx-auto px-6 pt-8 pb-4 transition-all duration-500 ease-in-out">
         <div className="max-w-6xl mx-auto">
           {/* Main Content - Text Left, Photo Right */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center mb-12">

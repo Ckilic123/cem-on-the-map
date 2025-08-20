@@ -10,7 +10,7 @@ const Index = () => {
   useScrollReveal();
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen page-scale">
       <Navigation />
       <HeroSection />
       <div className="mt-12">
