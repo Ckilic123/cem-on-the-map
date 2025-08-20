@@ -29,20 +29,14 @@ const projects = [{
   title: 'Last Mile Delivery Appointments @ AUTO1',
   description: 'Shipped a self-service tool that automated last mile delivery scheduling and reduced manual coordination, achieving 87% adoption and boosting delivery speed by 11%.',
   image: projectAuto1,
-  tech: ['Microservices', 'Prototyping', 'B2C'],
+  tech: ['Microservices', 'Customer Journey Mapping', 'B2C'],
   details: {
     company: 'AUTO1 Group',
     duration: '2021 - 2022',
     role: 'Product Manager',
     impact: '87% adoption, 11% speed improvement',
     challenge: 'Manual delivery scheduling resulted in delays, wrong bookings, and misallocation of the branches and home delivery driver capacity, forcing customer service employees to handle more workload.',
-    solution: 'Launched a self-service delivery scheduling tool:
-
-Customers select their preferred delivery appointment from available capacity-optimized slots.
-
-The system ensures bookings fit the most efficient allocation for us and the drivers.
-
-Assigned drivers automatically receive calendar invites with delivery details.',
+    solution: 'Built a self-service scheduling tool enabling customers to book delivery appointments in optimized slots, while drivers automatically received calendar invites with full delivery instructions.',
     results: [
       '11% improvement in delivery speed',
       'Reduced customer service calls by 20%'
