@@ -210,7 +210,7 @@
 
   /* Page scale for better default sizing */
   .page-scale {
-    transform: scale(0.70);
+    transform: scale(0.85);
     transform-origin: top center;
     width: 117.65%;
     margin-left: -8.825%;
