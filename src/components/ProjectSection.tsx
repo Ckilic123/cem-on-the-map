@@ -71,7 +71,7 @@ const ProjectSection = () => {
           {/* Title */}
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-6xl lg:text-7xl font-bold tracking-tight text-center leading-tight mb-6">
-              My <span className="text-[hsl(var(--secondary))]">Product Highlights</span>
+              Product <span className="text-[hsl(var(--secondary))]">Highlights</span>
             </h2>
             <p className="text-xl text-primary-foreground/80 leading-relaxed text-center max-w-2xl mx-auto">
               Fast, focused, and validated.
