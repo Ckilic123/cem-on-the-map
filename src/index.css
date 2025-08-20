@@ -193,13 +193,13 @@
   /* CTA Tilt Animation (subtle + rare) */
   @keyframes cta-tilt {
     0%, 96%, 100% { transform: rotate(0deg); }
-    97% { transform: rotate(-1.5deg); }
-    98% { transform: rotate(1.5deg); }
+    97% { transform: rotate(-3.5deg); }
+    98% { transform: rotate(3.5deg); }
     99% { transform: rotate(0deg); }
   }
 
   .animate-cta-tilt {
-    animation: cta-tilt 14s ease-in-out infinite;
+    animation: cta-tilt 8s ease-in-out infinite;
     will-change: transform;
   }
 
