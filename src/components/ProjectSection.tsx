@@ -45,21 +45,18 @@ const projects = [{
 }, {
   id: 'ing-fx',
   title: 'FX Rate Protected Time Deposit Account @ ING',
-  description: 'Launched FX-protected deposit product combining currency hedging with competitive yields for international customers.',
+  description: 'Launched FX-protected time deposit product MVP from 0 to 1 on mobile app and branches.',
   image: projectCarfax,
   tech: ['FinTech', 'Investment Advisory', 'Digital Banking'],
   details: {
     company: 'ING Bank',
-    duration: '2020 - 2021',
-    role: 'Product Manager',
-    impact: '€150M+ deposits, 25% retention boost',
-    challenge: 'International customers were losing money due to currency fluctuations on their deposits.',
-    solution: 'Created a time deposit account with built-in FX protection, allowing customers to benefit from high yields without currency risk.',
+    duration: '2021 - 2022',
+    role: 'Product Owner',
+    impact: '€300M+ deposits,
+    challenge: 'Currency instability was driving customers away from local-currency savings products.',
+    solution: 'Launched MVP of FX-protected time deposit across mobile banking and branches, enabling customers to earn high yields without currency risk.',
     results: [
-      '€150M+ in protected deposits',
-      '25% improvement in customer retention',
-      'Launched in 8 European markets',
-      'Winner of FinTech Innovation Award 2021'
+      '€300M+ in protected deposits'
     ]
   }
 }];
