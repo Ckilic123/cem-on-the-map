@@ -9,21 +9,19 @@ import projectMetro from '@/assets/project-metro.jpg';
 const projects = [{
   id: 'ing-advisory',
   title: 'Remote Advisory @ ING',
-  description: 'Launched Remote Advisory Service boosting investment revenue by 40% and generating €300M+ in deposits through digital transformation.',
+  description: 'Launched Remote Advisory Service for investment products boosting investment products revenue by 40%, achieving 90+% app adoption.',
   image: projectIng,
-  tech: ['Product Strategy', 'Data Analytics', 'UX Research'],
+  tech: ['Scrum', 'A/B Testing', 'Customer Journey Mapping'],
   details: {
     company: 'ING Bank',
-    duration: '2022 - 2023',
-    role: 'Senior Product Manager',
-    impact: '40% revenue boost, €300M+ deposits',
-    challenge: 'Traditional advisory services were limited to high-net-worth clients. We needed to democratize investment advice.',
-    solution: 'Developed a digital-first remote advisory platform combining AI-driven insights with human expertise.',
+    duration: '2020 - 2021',
+    role: 'Product Owner & Customer Journey Expert',
+    impact: '40% revenue boost',
+    challenge: 'Traditional advisory services were limited to high-net-worth clients, leaving mass and mass affluent segments underserved.',
+    solution: 'Developed a digital remote advisory solution on the mobile app for investment products such as stocks and ETFs, combining technology with human expertise.',
     results: [
-      'Increased investment revenue by 40%',
-      'Generated over €300M in new deposits',
-      'Expanded advisory services to 50,000+ new customers',
-      'Reduced advisory costs by 25%'
+      'Boosted investment revenue by 40%',
+      'Increased mobile app adoption rate over 90%'
     ]
   }
 }, {
