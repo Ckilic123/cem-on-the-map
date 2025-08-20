@@ -11,7 +11,7 @@ const projects = [{
   title: 'Remote Advisory @ ING',
   description: 'Launched Remote Advisory Service for investment products boosting investment products revenue by 40%, achieving 90+% app adoption.',
   image: projectIng,
-  tech: ['Scrum', 'A/B Testing', 'Customer Journey Mapping'],
+  tech: ['Scrum', 'A/B Testing', 'B2C'],
   details: {
     company: 'ING Bank',
     duration: '2020 - 2021',
@@ -27,21 +27,25 @@ const projects = [{
 }, {
   id: 'auto1-delivery',
   title: 'Last Mile Delivery Appointments @ AUTO1',
-  description: 'Developed self-service delivery tools achieving 87% adoption rate and 11% speed improvement across European markets with pay-on-delivery MVP.',
+  description: 'Shipped a self-service tool that automated last mile delivery scheduling and reduced manual coordination, achieving 87% adoption and boosting delivery speed by 11%.',
   image: projectAuto1,
-  tech: ['Product Management', 'Operations', 'International Markets'],
+  tech: ['Microservices', 'Prototyping', 'B2C'],
   details: {
     company: 'AUTO1 Group',
     duration: '2021 - 2022',
     role: 'Product Manager',
     impact: '87% adoption, 11% speed improvement',
-    challenge: 'Manual delivery scheduling was causing delays and poor customer experience across 30+ European markets.',
-    solution: 'Built a self-service appointment booking system with pay-on-delivery functionality and real-time tracking.',
+    challenge: 'Manual delivery scheduling resulted in delays, wrong bookings, and misallocation of the branches and home delivery driver capacity, forcing customer service employees to handle more workload.',
+    solution: 'Launched a self-service delivery scheduling tool:
+
+Customers select their preferred delivery appointment from available capacity-optimized slots.
+
+The system ensures bookings fit the most efficient allocation for us and the drivers.
+
+Assigned drivers automatically receive calendar invites with delivery details.',
     results: [
-      '87% customer adoption rate',
       '11% improvement in delivery speed',
-      'Reduced customer service calls by 40%',
-      'Expanded to 30+ European markets'
+      'Reduced customer service calls by 20%'
     ]
   }
 }, {
