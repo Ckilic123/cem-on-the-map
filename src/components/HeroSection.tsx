@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Linkedin, FileText, MapPin, Map, Mail, Compass } from 'lucide-react';
+import { Linkedin, FileText, MapPin, Mail, Compass } from 'lucide-react';
 import cemHeadshot from '@/assets/pic.jpg';
 import cemCV from '@/assets/Cem_Kilic_CV.pdf';
 import EuropeCareerMap from './EuropeCareerMap';
@@ -10,7 +10,10 @@ const HeroSection = () => {
 
   if (showMap) {
     return (
-      <section id="hero" className="hero-section min-h-screen pt-0 pb-0 transition-all duration-700 ease-in-out">
+      <section
+        id="hero"
+        className="hero-section min-h-screen pt-0 pb-0 transition-all duration-700 ease-in-out"
+      >
         <div className="container mx-auto px-6 py-4">
           {/* Move map down by 10% */}
           <div className="pt-[10vh] transition-all duration-500 ease-in-out">
@@ -34,7 +37,10 @@ const HeroSection = () => {
   }
 
   return (
-    <section id="hero" className="hero-section h-screen pt-0 pb-0 flex items-center justify-center transition-all duration-700 ease-in-out">
+    <section
+      id="hero"
+      className="hero-section h-screen pt-0 pb-0 flex items-center justify-center transition-all duration-700 ease-in-out"
+    >
       <div className="container mx-auto px-6 pt-8 pb-8 transition-all duration-500 ease-in-out">
         <div className="max-w-6xl mx-auto">
           {/* Main Content - Text Left, Photo Right */}
@@ -57,18 +63,14 @@ const HeroSection = () => {
                 </h2>
 
                 <p className="text-xl text-primary-foreground/80 leading-relaxed text-left max-w-lg">
-                  I'm a Product Manager based in Munich, Germany. I have over 5 years' blended experience in product roles across B2C and B2B. Fluent in English and German.
+                  I'm a Product Manager based in Munich, Germany. I have over 5 years' blended
+                  experience in product roles across B2C and B2B. Fluent in English and German.
                 </p>
               </div>
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-start items-start pt-6">
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  asChild
-                  className="min-w-[160px] h-12"
-                >
+                <Button size="lg" variant="secondary" asChild className="min-w-[160px] h-12">
                   <a
                     href="https://linkedin.com/in/cem-kilic-pm"
                     target="_blank"
@@ -80,12 +82,7 @@ const HeroSection = () => {
                   </a>
                 </Button>
 
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  asChild
-                  className="min-w-[160px] h-12"
-                >
+                <Button size="lg" variant="secondary" asChild className="min-w-[160px] h-12">
                   <a
                     href={cemCV}
                     target="_blank"
@@ -97,12 +94,7 @@ const HeroSection = () => {
                   </a>
                 </Button>
 
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  asChild
-                  className="min-w-[160px] h-12"
-                >
+                <Button size="lg" variant="secondary" asChild className="min-w-[160px] h-12">
                   <a
                     href="mailto:cem.klc@yahoo.com"
                     className="flex items-center justify-center gap-2"
@@ -125,8 +117,8 @@ const HeroSection = () => {
                   />
                 </div>
                 {/* Decorative elements */}
-                <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary/20 rounded-full blur-sm"></div>
-                <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-primary/10 rounded-full blur-sm"></div>
+                <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary/20 rounded-full blur-sm" />
+                <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-primary/10 rounded-full blur-sm" />
               </div>
             </div>
           </div>
@@ -136,9 +128,9 @@ const HeroSection = () => {
             <Button
               size="lg"
               onClick={() => setShowMap(true)}
-              className="min-w-[220px] h-14 bg-primary hover:bg-primary/90 text-primary-foreground font-medium text-lg shadow-lg hover:shadow-xl transition-all duration-300 animate-cta-tilt"
+              className="min-w-[220px] h-14 bg-primary hover:bg-primary/90 text-primary-foreground font-medium text-lg shadow-lg hover:shadow-xl transition-all duration-300 animate-cta-tilt-v2"
             >
-              <Compass className="w-6 h-6 mr-3 animate-spin-slow" />
+              <Compass className="w-6 h-6 mr-3" />
               Have a look at my journey
             </Button>
           </div>
