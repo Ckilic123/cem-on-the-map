@@ -190,23 +190,22 @@
     transform: translateY(0);
   }
 
-  /* CTA Tilt Animation (subtle + rare) */
+  /* CTA Tilt Animation (subtle, every 12s) */
   @keyframes cta-tilt {
-  0%, 88%   { transform: rotate(0deg); }   /* idle most of the time */
-  40%       { transform: rotate(-7.2deg); } /* one gentle nudge */
-  98%,100%  { transform: rotate(0deg); }    /* smooth settle, no bounce */
-}
+    0%, 90%, 100% { transform: rotate(0deg); }  /* idle most of the cycle */
+    40%           { transform: rotate(-7.2deg); } /* one gentle tilt */
+  }
 
-.animate-cta-tilt {
-  display: inline-block;                /* isolate transform to avoid wobble */
-  transform-origin: center;             /* pivot in place */
-  animation: cta-tilt 20s cubic-bezier(.25, .8, .25, 1) infinite;
-  will-change: transform;
-}
+  .animate-cta-tilt {
+    display: inline-block;
+    transform-origin: center;
+    animation: cta-tilt 12s cubic-bezier(.25,.8,.25,1) infinite;
+    will-change: transform;
+  }
 
-@media (prefers-reduced-motion: reduce) {
-  .animate-cta-tilt { animation: none; }
-}
+  @media (prefers-reduced-motion: reduce) {
+    .animate-cta-tilt { animation: none; }
+  }
 
   /* Page scale for better default sizing */
   .page-scale {
