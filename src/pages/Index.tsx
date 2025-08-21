@@ -4,7 +4,7 @@ import ProjectSection from '@/components/ProjectSection';
 
 export default function IndexPage() {
   return (
-    <div>
+    <div className="page-scale">
       <HeroSection />
       <ProjectSection />
     </div>
