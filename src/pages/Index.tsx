@@ -1,3 +1,4 @@
+import Navigation from "@/components/Navigation";
 import React from 'react';
 import HeroSection from '@/components/HeroSection';
 import ProjectSection from '@/components/ProjectSection';
@@ -5,6 +6,7 @@ import ProjectSection from '@/components/ProjectSection';
 export default function IndexPage() {
   return (
     <div className="page-scale">
+      <Navigation />
       <HeroSection />
       <ProjectSection />
     </div>
