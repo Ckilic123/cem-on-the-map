@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
 import {
-  ExternalLink, X, Calendar, Target, TrendingUp, Users, Award
+  ExternalLink, X, Calendar, Target, TrendingUp, Users,
 } from 'lucide-react';
 import projectCarfax from '@/assets/project-carfax.jpg';
 import projectAuto1 from '@/assets/project-auto1.jpg';

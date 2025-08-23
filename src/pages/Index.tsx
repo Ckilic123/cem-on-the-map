@@ -1,17 +1,16 @@
-import Navigation from "@/components/Navigation";
+import Navigation from '@/components/Navigation';
 import React from 'react';
 import HeroSection from '@/components/HeroSection';
 import ProjectSection from '@/components/ProjectSection';
+import Footer from '@/components/Footer'; // NEW
 
-import Footer from '@/components/Footer';
- default function IndexPage() {
+export default function IndexPage() {
   return (
-<div>
-  
+    <div>
       <Navigation />
       <HeroSection />
       <ProjectSection />
-        <Footer />
+      <Footer /> {/* Thin footer at bottom */}
     </div>
   );
 }
