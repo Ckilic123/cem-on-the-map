@@ -14,7 +14,7 @@ const HeroSection = () => {
         id="hero"
         className="hero-section min-h-[135vh] sm:min-h-[130vh] md:min-h-[125vh] lg:min-h-[120vh] xl:min-h-[115vh] 2xl:min-h-[110vh] pt-4 pb-2 flex items-center justify-center transition-all duration-700 ease-in-out"
       >
-        <div className="container mx-auto px-6 py-4">
+        <div className="container mx-auto px-6 pt-4 pb-4 transition-all duration-500 ease-in-out">
           {/* Move map down by 10% */}
           <div className="pt-[10vh] transition-all duration-500 ease-in-out">
             <div className="max-w-7xl mx-auto h-[75vh]">
@@ -44,7 +44,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 pt-8 pb-8 transition-all duration-500 ease-in-out">
         <div className="max-w-6xl mx-auto">
           {/* Main Content - Text Left, Photo Right */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center mb-6">
             {/* Text Content */}
             <div className="lg:col-span-7 space-y-8">
               {/* Location */}
