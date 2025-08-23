@@ -12,7 +12,7 @@ const HeroSection = () => {
     return (
       <section
         id="hero"
-        className="hero-section min-h-[140vh] pt-0 pb-0 flex items-center justify-center transition-all duration-700 ease-in-out"
+        className="hero-section min-h-[140vh] pt-0 pb-[10vh] flex items-center justify-center transition-all duration-700 ease-in-out"
       >
         <div className="container mx-auto px-6 py-4">
           {/* Move map down by 10% */}
@@ -39,7 +39,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="hero-section h-screen pt-0 pb-0 flex items-center justify-center transition-all duration-700 ease-in-out"
+      className="hero-section min-h-[140vh] pt-0 pb-[10vh] flex items-center justify-center transition-all duration-700 ease-in-out"
     >
       <div className="container mx-auto px-6 pt-8 pb-8 transition-all duration-500 ease-in-out">
         <div className="max-w-6xl mx-auto">
