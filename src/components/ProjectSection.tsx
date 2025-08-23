@@ -11,7 +11,7 @@ const projects = [{
   title: 'Remote Advisory @ ING',
   description: 'Launched Remote Advisory Service for investment products boosting investment products revenue by 40%, achieving 90+% app adoption.',
   image: projectIng,
-  tech: ['Scrum', 'A/B Testing', 'B2C'],
+  tech: ['Scrum', 'A/B Testing', 'B2C', 'Mobile App', 'Product Strategy'],
   details: {
     company: 'ING Bank',
     duration: '2020 - 2021',
@@ -29,7 +29,7 @@ const projects = [{
   title: 'Last Mile Delivery Appointments @ AUTO1',
   description: 'Shipped a self-service tool that automated last mile delivery scheduling and reduced manual coordination.',
   image: projectAuto1,
-  tech: ['Microservices', 'Customer Journey Mapping', 'B2C'],
+  tech: ['Microservices', 'Customer Journey Mapping', 'B2C', 'API Integration', 'Process Automation'],
   details: {
     company: 'AUTO1 Group',
     duration: '2021 - 2022',
@@ -47,7 +47,7 @@ const projects = [{
   title: 'FX Rate Protected Time Deposit Account @ ING',
   description: 'Launched FX-protected time deposit product MVP from 0 to 1 on mobile app and branches.',
   image: projectCarfax,
-  tech: ['MVP', 'Go-to-Market', 'API Integration'],
+  tech: ['MVP', 'Go-to-Market', 'API Integration', 'Financial Products', 'Risk Management'],
   details: {
     company: 'ING Bank',
     duration: '2021 - 2022',
@@ -63,6 +63,7 @@ const projects = [{
 
 const ProjectSection = () => {
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
+  const [hoveredProject, setHoveredProject] = useState<typeof projects[0] | null>(null);
 
   return (
     <>
@@ -82,8 +83,10 @@ const ProjectSection = () => {
             {projects.map((project, index) => (
               <div
                 key={project.id}
+                onMouseEnter={() => setHoveredProject(project)}
+                onMouseLeave={() => setHoveredProject(null)}
                 onClick={() => setSelectedProject(project)}
-                className="group cursor-pointer transform transition-all duration-500 hover:scale-105"
+                className="group cursor-pointer transform transition-all duration-500 hover:scale-105 relative"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Card */}
@@ -100,10 +103,10 @@ const ProjectSection = () => {
                     {/* Floating tech badges */}
                     <div className="absolute top-4 left-4 right-4">
                       <div className="flex flex-wrap gap-2">
-                        {project.tech.slice(0, 2).map((tech, techIndex) => (
+                        {project.tech.slice(0, 3).map((tech, techIndex) => (
                           <span
                             key={techIndex}
-                            className="px-3 py-1 bg-primary/20 backdrop-blur-sm text-white text-xs rounded-full border border-primary/30"
+                            className="px-3 py-1 bg-orange-500/90 backdrop-blur-sm text-white text-xs rounded-full border border-orange-400/50 font-medium shadow-sm"
                           >
                             {tech}
                           </span>
@@ -139,6 +142,88 @@ const ProjectSection = () => {
                     </div>
                   </div>
                 </div>
+
+                {/* Hover Popup */}
+                {hoveredProject?.id === project.id && (
+                  <div className="absolute top-0 left-0 right-0 z-50 pointer-events-none">
+                    <div className="bg-gradient-to-br from-background to-background/95 rounded-3xl shadow-2xl border border-border/50 p-6 mx-4 mt-4 animate-fade-in">
+                      {/* Overview */}
+                      <div className="grid grid-cols-3 gap-4 mb-4">
+                        <div className="flex items-center gap-2">
+                          <div className="p-1.5 bg-primary/10 rounded-lg">
+                            <Users className="w-4 h-4 text-primary" />
+                          </div>
+                          <div>
+                            <p className="text-xs text-muted-foreground">Company</p>
+                            <p className="font-semibold text-sm">{project.details.company}</p>
+                          </div>
+                        </div>
+                        
+                        <div className="flex items-center gap-2">
+                          <div className="p-1.5 bg-primary/10 rounded-lg">
+                            <Calendar className="w-4 h-4 text-primary" />
+                          </div>
+                          <div>
+                            <p className="text-xs text-muted-foreground">Duration</p>
+                            <p className="font-semibold text-sm">{project.details.duration}</p>
+                          </div>
+                        </div>
+                        
+                        <div className="flex items-center gap-2">
+                          <div className="p-1.5 bg-primary/10 rounded-lg">
+                            <Target className="w-4 h-4 text-primary" />
+                          </div>
+                          <div>
+                            <p className="text-xs text-muted-foreground">Role</p>
+                            <p className="font-semibold text-sm">{project.details.role}</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Challenge & Solution */}
+                      <div className="grid grid-cols-2 gap-4 mb-4">
+                        <div>
+                          <h4 className="text-sm font-bold mb-2 flex items-center gap-1">
+                            <Target className="w-3 h-3 text-primary" />
+                            Challenge
+                          </h4>
+                          <p className="text-xs text-muted-foreground leading-relaxed line-clamp-3">
+                            {project.details.challenge}
+                          </p>
+                        </div>
+                        
+                        <div>
+                          <h4 className="text-sm font-bold mb-2 flex items-center gap-1">
+                            <TrendingUp className="w-3 h-3 text-primary" />
+                            Solution
+                          </h4>
+                          <p className="text-xs text-muted-foreground leading-relaxed line-clamp-3">
+                            {project.details.solution}
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Results */}
+                      <div>
+                        <h4 className="text-sm font-bold mb-2 flex items-center gap-1">
+                          <Award className="w-3 h-3 text-primary" />
+                          Key Results
+                        </h4>
+                        <div className="grid grid-cols-1 gap-2">
+                          {project.details.results.slice(0, 2).map((result, index) => (
+                            <div
+                              key={index}
+                              className="flex items-center gap-2 p-2 bg-primary/5 rounded-lg border border-primary/10"
+                            >
+                              <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
+                              <p className="text-xs text-foreground">{result}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -173,7 +258,7 @@ const ProjectSection = () => {
                     {selectedProject.tech.map((tech, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-sm rounded-full border border-white/30"
+                        className="px-3 py-1 bg-orange-500/90 backdrop-blur-sm text-white text-sm rounded-full border border-orange-400/50 font-medium shadow-sm"
                       >
                         {tech}
                       </span>
