@@ -1,12 +1,16 @@
+import Navigation from "@/components/Navigation";
 import React from 'react';
 import HeroSection from '@/components/HeroSection';
 import ProjectSection from '@/components/ProjectSection';
 
 export default function IndexPage() {
   return (
-    <div className="page-scale">
-      <HeroSection />
-      <ProjectSection />
-    </div>
+    <>
+      <Navigation />
+      <div className="page-scale pt-16">
+        <HeroSection />
+        <ProjectSection />
+      </div>
+    </>
   );
 }
