@@ -3,12 +3,15 @@ import React from 'react';
 import HeroSection from '@/components/HeroSection';
 import ProjectSection from '@/components/ProjectSection';
 
-export default function IndexPage() {
+import Footer from '@/components/Footer';
+ default function IndexPage() {
   return (
-    <div className="page-scale">
+<div>
+  
       <Navigation />
       <HeroSection />
       <ProjectSection />
+        <Footer />
     </div>
   );
 }
