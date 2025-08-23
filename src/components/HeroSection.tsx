@@ -12,7 +12,7 @@ const HeroSection = () => {
     return (
       <section
         id="hero"
-        className="hero-section min-h-[115vh] sm:min-h-[120vh] md:min-h-[125vh] lg:min-h-[130vh] xl:min-h-[135vh] 2xl:min-h-[140vh] pt-0 pb-[8vh] flex items-center justify-center transition-all duration-700 ease-in-out"
+        className="hero-section min-h-[135vh] sm:min-h-[130vh] md:min-h-[125vh] lg:min-h-[120vh] xl:min-h-[115vh] 2xl:min-h-[110vh] pt-4 pb-2 flex items-center justify-center transition-all duration-700 ease-in-out"
       >
         <div className="container mx-auto px-6 py-4">
           {/* Move map down by 10% */}
