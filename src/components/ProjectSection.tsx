@@ -96,6 +96,14 @@ const ProjectSection: React.FC = () => {
   const [hoveredProject, setHoveredProject] = useState<typeof projects[0] | null>(null);
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
 
+  const handleMouseMove = (e: React.MouseEvent) => {
+    // Get the cursor position relative to the viewport
+    setCursor({ 
+      x: e.clientX + 20, 
+      y: e.clientY - 50 
+    });
+  };
+
   return (
     <section id="projects" className="pt-4 md:pt-8 pb-20 hero-section relative">
       <div className="container mx-auto px-6">
@@ -115,9 +123,7 @@ const ProjectSection: React.FC = () => {
               className="group cursor-pointer transform transition-all duration-500 hover:scale-105 relative"
               onMouseEnter={() => setHoveredProject(project)}
               onMouseLeave={() => setHoveredProject(null)}
-              onMouseMove={(e) =>
-                setCursor({ x: e.clientX + 20, y: e.clientY - 30 })
-              }
+              onMouseMove={handleMouseMove}
             >
               <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-500">
                 <div className="relative overflow-hidden h-64">
@@ -169,20 +175,32 @@ const ProjectSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Floating Hover Preview */}
+      {/* Floating Hover Preview - Fixed Version */}
       {hoveredProject && (
         <div
-          className="fixed z-50 w-80 p-4 bg-background/95 rounded-xl shadow-2xl border border-border animate-fade-in"
+          className="fixed z-[9999] w-80 p-4 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-xl shadow-2xl border border-gray-200/50 dark:border-gray-700/50 transform transition-all duration-200 ease-out opacity-100 scale-100"
           style={{
-            top: `${cursor.y}px`,
-            left: `${cursor.x}px`,
+            top: `${Math.min(cursor.y, window.innerHeight - 200)}px`,
+            left: `${Math.min(cursor.x, window.innerWidth - 320)}px`,
             pointerEvents: 'none',
           }}
         >
-          <h4 className="text-lg font-bold mb-1">{hoveredProject.title}</h4>
-          <p className="text-sm text-muted-foreground line-clamp-4">
-            {hoveredProject.details.challenge}
-          </p>
+          <div className="space-y-2">
+            <h4 className="text-lg font-bold text-gray-900 dark:text-white line-clamp-1">
+              {hoveredProject.title}
+            </h4>
+            <div className="text-xs text-gray-500 dark:text-gray-400 font-medium">
+              {hoveredProject.details.company} • {hoveredProject.details.duration}
+            </div>
+            <p className="text-sm text-gray-700 dark:text-gray-300 line-clamp-3 leading-relaxed">
+              {hoveredProject.details.challenge}
+            </p>
+            <div className="pt-2 border-t border-gray-200/50 dark:border-gray-700/50">
+              <span className="text-xs font-semibold text-orange-600 dark:text-orange-400">
+                Impact: {hoveredProject.details.impact}
+              </span>
+            </div>
+          </div>
         </div>
       )}
     </section>
