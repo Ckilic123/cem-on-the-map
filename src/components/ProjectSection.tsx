@@ -82,7 +82,7 @@ const ProjectSection: React.FC = () => {
   return (
     <>
       {/* Projects section with classic design */}
-      <section id="projects" className="pt-4 md:pt-8 pb-20 hero-section">
+      <section id="projects" className="pt-16 pb-16 hero-section">
         <div className="container mx-auto px-6">
           {/* Title */}
           <div className="text-center mb-12 md:mb-16">

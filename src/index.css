@@ -192,14 +192,17 @@
 
 /* new name to bust cache */
 @keyframes cta-tilt-v2 {
-  0%, 92%, 100% { transform: rotate(0deg); }  /* flat almost all the time */
-  94%           { transform: rotate(-1.2deg); } /* quick nudge */
+  0%, 95%, 100% { transform: rotate(0deg) scale(1); }
+  96% { transform: rotate(-0.8deg) scale(1.005); }
+  97% { transform: rotate(0.8deg) scale(1.005); }
+  98% { transform: rotate(-0.4deg) scale(1.002); }
+  99% { transform: rotate(0deg) scale(1); }
 }
 
 .animate-cta-tilt-v2 {
   display: inline-block;
   transform-origin: center;
-  animation: cta-tilt-v2 12s cubic-bezier(.25,.8,.25,1) infinite;
+  animation: cta-tilt-v2 10s ease-in-out infinite;
   will-change: transform;
 }
 
