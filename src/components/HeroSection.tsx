@@ -41,19 +41,19 @@ const HeroSection: React.FC = () => {
       id="hero"
       className="hero-section h-screen w-full pt-0 pb-0 flex items-center justify-center transition-all duration-700 ease-in-out"
     >
-      <div className="w-full px-8 py-12 transition-all duration-500 ease-in-out flex items-center justify-center">
-        <div className="max-w-7xl w-full mx-auto">
+      <div className="w-full h-full px-8 py-16 transition-all duration-500 ease-in-out flex flex-col justify-between">
+        <div className="max-w-7xl w-full mx-auto flex-1 flex flex-col justify-center">
           {/* Main Content - Text Left, Photo Right */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center mb-16">
             {/* Text Content */}
-            <div className="lg:col-span-7 space-y-8">
+            <div className="lg:col-span-7 space-y-12">
               {/* Location */}
-              <div className="flex items-center gap-3 text-primary-foreground/80 mb-2">
+              <div className="flex items-center gap-3 text-primary-foreground/80 mb-4">
                 <MapPin className="w-5 h-5" />
                 <span className="text-lg font-medium">Munich, Germany</span>
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-8">
                 <h1 className="text-6xl lg:text-7xl font-bold tracking-tight text-left leading-tight">
                   Hi! I'm <span className="text-[hsl(var(--secondary))]">Cem</span>.
                 </h1>
@@ -68,8 +68,8 @@ const HeroSection: React.FC = () => {
                 </p>
               </div>
 
-              {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-start items-start pt-6">
+              {/* Contact Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-start items-start pt-8">
                 <Button size="lg" variant="secondary" asChild className="min-w-[160px] h-12">
                   <a
                     href="https://linkedin.com/in/cem-kilic-pm"
@@ -79,18 +79,6 @@ const HeroSection: React.FC = () => {
                   >
                     <Linkedin className="w-5 h-5" />
                     LinkedIn
-                  </a>
-                </Button>
-
-                <Button size="lg" variant="secondary" asChild className="min-w-[160px] h-12">
-                  <a
-                    href={cemCV}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2"
-                  >
-                    <FileText className="w-5 h-5" />
-                    Resume
                   </a>
                 </Button>
 
@@ -119,9 +107,25 @@ const HeroSection: React.FC = () => {
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Journey CTA */}
-          <div className="text-center">
+        {/* Bottom Section with Resume and Journey CTA */}
+        <div className="max-w-7xl w-full mx-auto">
+          <div className="flex flex-col items-center gap-8">
+            {/* Resume Button */}
+            <Button size="lg" variant="secondary" asChild className="min-w-[160px] h-12">
+              <a
+                href={cemCV}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2"
+              >
+                <FileText className="w-5 h-5" />
+                Resume
+              </a>
+            </Button>
+
+            {/* Journey CTA */}
             <Button
               size="lg"
               onClick={() => setShowMap(true)}
