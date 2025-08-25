@@ -190,19 +190,19 @@
     transform: translateY(0);
   }
 
-/* new name to bust cache */
+/* Enhanced CTA animation to grab attention */
 @keyframes cta-tilt-v2 {
-  0%, 95%, 100% { transform: rotate(0deg) scale(1); }
-  96% { transform: rotate(-0.8deg) scale(1.005); }
-  97% { transform: rotate(0.8deg) scale(1.005); }
-  98% { transform: rotate(-0.4deg) scale(1.002); }
-  99% { transform: rotate(0deg) scale(1); }
+  0%, 90%, 100% { transform: rotate(0deg) scale(1); }
+  92% { transform: rotate(-2deg) scale(1.05); }
+  94% { transform: rotate(2deg) scale(1.05); }
+  96% { transform: rotate(-1deg) scale(1.03); }
+  98% { transform: rotate(0deg) scale(1); }
 }
 
 .animate-cta-tilt-v2 {
   display: inline-block;
   transform-origin: center;
-  animation: cta-tilt-v2 10s ease-in-out infinite;
+  animation: cta-tilt-v2 6s ease-in-out infinite;
   will-change: transform;
 }
 
@@ -215,6 +215,7 @@
       transform-origin: top center;
       width: 125%;
       margin-left: -12.5%;
-      min-height: 100vh;
+      height: 100vh;
+      overflow-y: auto;
   }
 }
