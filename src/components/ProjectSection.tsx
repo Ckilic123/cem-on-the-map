@@ -100,7 +100,6 @@ const ProjectSection: React.FC = () => {
                 key={project.id}
                 onMouseEnter={() => setHoveredProject(project)}
                 onMouseLeave={() => setHoveredProject(null)}
-                onClick={() => setSelectedProject(project)}
                 className="group cursor-pointer transform transition-all duration-500 hover:scale-105 relative"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -165,7 +164,7 @@ const ProjectSection: React.FC = () => {
       </section>
 
       {/* Project Detail Modal */}
-      {selectedProject && (
+      {hoveredProject && (
         <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm animate-fade-in overflow-y-auto">
           <div className="min-h-full flex items-center justify-center p-4">
             <div className="relative w-full max-w-4xl my-8">
@@ -173,23 +172,23 @@ const ProjectSection: React.FC = () => {
                 {/* Header */}
                 <div className="relative overflow-hidden rounded-t-3xl">
                   <img
-                    src={selectedProject.image}
-                    alt={selectedProject.title}
+                    src={hoveredProject.image}
+                    alt={hoveredProject.title}
                     className="w-full h-64 object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                   <button
-                    onClick={() => setSelectedProject(null)}
+                    onClick={() => setHoveredProject(null)}
                     className="absolute top-4 right-4 p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors"
                   >
                     <X className="w-6 h-6" />
                   </button>
                   <div className="absolute bottom-6 left-6 right-6 text-white">
                     <h2 className="text-4xl font-bold mb-2">
-                      {selectedProject.title}
+                      {hoveredProject.title}
                     </h2>
                     <div className="flex flex-wrap gap-2">
-                      {selectedProject.tech.map((tech, index) => (
+                      {hoveredProject.tech.map((tech, index) => (
                         <span
                           key={index}
                           className="px-3 py-1 bg-orange-500/90 backdrop-blur-sm text-white text-sm rounded-full border border-orange-400/50 font-medium shadow-sm"
@@ -211,7 +210,7 @@ const ProjectSection: React.FC = () => {
                       <div>
                         <p className="text-sm text-muted-foreground">Company</p>
                         <p className="font-semibold">
-                          {selectedProject.details.company}
+                          {hoveredProject.details.company}
                         </p>
                       </div>
                     </div>
@@ -222,7 +221,7 @@ const ProjectSection: React.FC = () => {
                       <div>
                         <p className="text-sm text-muted-foreground">Duration</p>
                         <p className="font-semibold">
-                          {selectedProject.details.duration}
+                          {hoveredProject.details.duration}
                         </p>
                       </div>
                     </div>
@@ -233,7 +232,7 @@ const ProjectSection: React.FC = () => {
                       <div>
                         <p className="text-sm text-muted-foreground">Role</p>
                         <p className="font-semibold">
-                          {selectedProject.details.role}
+                          {hoveredProject.details.role}
                         </p>
                       </div>
                     </div>
@@ -245,7 +244,7 @@ const ProjectSection: React.FC = () => {
                         <Target className="w-5 h-5 text-primary" /> Challenge
                       </h3>
                       <p className="text-muted-foreground leading-relaxed">
-                        {selectedProject.details.challenge}
+                        {hoveredProject.details.challenge}
                       </p>
                     </div>
                     <div>
@@ -253,7 +252,7 @@ const ProjectSection: React.FC = () => {
                         <TrendingUp className="w-5 h-5 text-primary" /> Solution
                       </h3>
                       <p className="text-muted-foreground leading-relaxed">
-                        {selectedProject.details.solution}
+                        {hoveredProject.details.solution}
                       </p>
                     </div>
                   </div>
@@ -263,7 +262,7 @@ const ProjectSection: React.FC = () => {
                       <Award className="w-5 h-5 text-primary" /> Key Results
                     </h3>
                     <div className="grid md:grid-cols-2 gap-4">
-                      {selectedProject.details.results.map((result, index) => (
+                      {hoveredProject.details.results.map((result, index) => (
                         <div
                           key={index}
                           className="flex items-center gap-3 p-4 bg-primary/5 rounded-xl border border-primary/10"
