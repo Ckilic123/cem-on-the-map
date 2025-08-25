@@ -95,14 +95,6 @@ const projects = [
 const ProjectSection: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
 
-  const handleProjectClick = (project: typeof projects[0]) => {
-    setSelectedProject(project);
-  };
-
-  const closeModal = () => {
-    setSelectedProject(null);
-  };
-
   return (
     <section id="projects" className="pt-4 md:pt-8 pb-20 hero-section relative">
       <div className="container mx-auto px-6">
@@ -120,7 +112,7 @@ const ProjectSection: React.FC = () => {
             <div
               key={project.id}
               className="group cursor-pointer transform transition-all duration-500 hover:scale-105 relative"
-              onClick={() => handleProjectClick(project)}
+              onClick={() => setSelectedProject(project)}
             >
               <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-500">
                 <div className="relative overflow-hidden h-64">
@@ -172,45 +164,27 @@ const ProjectSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Centered Modal Overlay */}
+      {/* Modal - Fixed positioning to center */}
       {selectedProject && (
         <>
-          {/* Background Overlay */}
           <div 
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9998] transition-opacity duration-300"
-            onClick={closeModal}
+            className="fixed inset-0 bg-black/50 z-50"
+            onClick={() => setSelectedProject(null)}
           />
-          
-          {/* Centered Modal */}
-          <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4">
-            <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-2xl shadow-2xl border border-gray-200/50 dark:border-gray-700/50 max-w-2xl w-full max-h-[80vh] overflow-y-auto transform transition-all duration-300 scale-100 opacity-100">
-              {/* Modal Header */}
-              <div className="sticky top-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm p-6 border-b border-gray-200/50 dark:border-gray-700/50 flex items-center justify-between">
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-                  {selectedProject.title}
-                </h2>
+          <div className="fixed inset-0 flex items-center justify-center z-50 p-4">
+            <div className="w-80 p-4 bg-background/95 rounded-xl shadow-2xl border border-border">
+              <div className="flex justify-between items-start mb-1">
+                <h4 className="text-lg font-bold">{selectedProject.title}</h4>
                 <button
-                  onClick={closeModal}
-                  className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors duration-200"
+                  onClick={() => setSelectedProject(null)}
+                  className="ml-2"
                 >
-                  <X className="w-6 h-6 text-gray-500 dark:text-gray-400" />
+                  <X className="w-4 h-4" />
                 </button>
               </div>
-
-              {/* Modal Content - Keep original simple content */}
-              <div className="p-6 space-y-4">
-                <div className="text-sm text-gray-500 dark:text-gray-400 font-medium">
-                  {selectedProject.details.company} • {selectedProject.details.duration}
-                </div>
-                <p className="text-sm text-gray-700 dark:text-gray-300 line-clamp-3 leading-relaxed">
-                  {selectedProject.details.challenge}
-                </p>
-                <div className="pt-2 border-t border-gray-200/50 dark:border-gray-700/50">
-                  <span className="text-sm font-semibold text-orange-600 dark:text-orange-400">
-                    Impact: {selectedProject.details.impact}
-                  </span>
-                </div>
-              </div>
+              <p className="text-sm text-muted-foreground line-clamp-4">
+                {selectedProject.details.challenge}
+              </p>
             </div>
           </div>
         </>
