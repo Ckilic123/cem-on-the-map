@@ -3,7 +3,7 @@ import { Mail, Linkedin } from 'lucide-react';
 
 const SimpleFooter = () => {
   return (
-    <footer className="py-12 mt-8 border-t border-primary/20 bg-gradient-to-t from-primary/5 to-transparent">
+    <footer className="py-12 border-t border-primary/20 bg-gradient-to-t from-primary/5 to-transparent mt-auto">
       <div className="container mx-auto px-6">
         <div className="text-center space-y-6">
           <div className="flex justify-center items-center gap-6">
