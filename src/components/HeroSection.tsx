@@ -39,10 +39,10 @@ const HeroSection: React.FC = () => {
   return (
     <section
       id="hero"
-      className="hero-section h-screen pt-0 pb-0 flex items-center justify-center transition-all duration-700 ease-in-out"
+      className="hero-section h-screen w-full pt-0 pb-0 flex items-center justify-center transition-all duration-700 ease-in-out"
     >
-      <div className="container mx-auto px-6 pt-8 pb-8 transition-all duration-500 ease-in-out">
-        <div className="max-w-none mx-auto">
+      <div className="w-full h-full px-6 pt-8 pb-8 transition-all duration-500 ease-in-out flex items-center justify-center">
+        <div className="max-w-7xl w-full mx-auto">
           {/* Main Content - Text Left, Photo Right */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center mb-12">
             {/* Text Content */}
@@ -106,7 +106,7 @@ const HeroSection: React.FC = () => {
             {/* Photo */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="w-96 h-96 rounded-full overflow-hidden border-2 border-primary/20 shadow-2xl">
+                <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-2 border-primary/20 shadow-2xl">
                   <img
                     src={cemHeadshot}
                     alt="Cem Kilic - Product Manager"
