@@ -1,14 +1,19 @@
+// ProjectSection.tsx
 import React, { useState } from 'react';
-// Note: Removed unused Button import from the original file to avoid
-// TypeScript build errors for unused variables.
-import { ExternalLink, X, Calendar, Target, TrendingUp, Users, Award } from 'lucide-react';
+import {
+  ExternalLink,
+  X,
+  Calendar,
+  Target,
+  TrendingUp,
+  Users,
+  Award,
+} from 'lucide-react';
+
 import projectCarfax from '@/assets/project-carfax.jpg';
 import projectAuto1 from '@/assets/project-auto1.jpg';
 import projectIng from '@/assets/project-ing.jpg';
-import projectMetro from '@/assets/project-metro.jpg';
 
-// Original projects array with full details. This mirrors the version prior
-// to the recent design changes.
 const projects = [
   {
     id: 'ing-advisory',
@@ -38,7 +43,13 @@ const projects = [
     description:
       'Shipped a self-service tool that automated last mile delivery scheduling and reduced manual coordination.',
     image: projectAuto1,
-    tech: ['Microservices', 'Customer Journey Mapping', 'B2C', 'API Integration', 'Process Automation'],
+    tech: [
+      'Microservices',
+      'Customer Journey Mapping',
+      'B2C',
+      'API Integration',
+      'Process Automation',
+    ],
     details: {
       company: 'AUTO1 Group',
       duration: '2021 - 2022',
@@ -60,7 +71,13 @@ const projects = [
     description:
       'Launched FX-protected time deposit product MVP from 0 to 1 on mobile app and branches.',
     image: projectCarfax,
-    tech: ['MVP', 'Go-to-Market', 'API Integration', 'Financial Products', 'Risk Management'],
+    tech: [
+      'MVP',
+      'Go-to-Market',
+      'API Integration',
+      'Financial Products',
+      'Risk Management',
+    ],
     details: {
       company: 'ING Bank',
       duration: '2021 - 2022',
@@ -77,210 +94,128 @@ const projects = [
 
 const ProjectSection: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
-  const [hoveredProject, setHoveredProject] = useState<typeof projects[0] | null>(null);
+
+  const handleProjectClick = (project: typeof projects[0]) => {
+    setSelectedProject(project);
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+  };
 
   return (
-    <>
-      {/* Projects section with classic design */}
-      <section id="projects" className="pt-4 md:pt-8 pb-20 hero-section">
-        <div className="container mx-auto px-6">
-          {/* Title */}
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-6xl lg:text-7xl font-bold tracking-tight text-center leading-tight mb-6">
-              Product <span className="text-[hsl(var(--secondary))]">Highlights</span>
-            </h2>
-            <p className="text-xl text-primary-foreground/80 leading-relaxed text-center max-w-2xl mx-auto">
-              Fast, focused, and validated.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {projects.map((project, index) => (
-              <div
-                key={project.id}
-                onMouseEnter={() => setHoveredProject(project)}
-                onMouseLeave={() => setHoveredProject(null)}
-                onClick={() => setSelectedProject(project)}
-                className="group cursor-pointer transform transition-all duration-500 hover:scale-105 relative"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {/* Card */}
-                <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-500">
-                  {/* Image */}
-                  <div className="relative overflow-hidden h-64">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-
-                    {/* Floating tech badges */}
-                    <div className="absolute top-4 left-4 right-4">
-                      <div className="flex flex-wrap gap-2">
-                        {project.tech.slice(0, 3).map((tech, techIndex) => (
-                          <span
-                            key={techIndex}
-                            className="px-3 py-1 bg-orange-500/90 backdrop-blur-sm text-white text-xs rounded-full border border-orange-400/50 font-medium shadow-sm"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Hover overlay */}
-                    <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                      <div className="text-white text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                        <ExternalLink className="w-8 h-8 mx-auto mb-2" />
-                        <p className="text-sm font-medium">View Details</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Content */}
-                  <div className="p-8 space-y-4">
-                    <h3 className="text-2xl font-bold text-primary-foreground group-hover:text-secondary transition-colors duration-300">
-                      {project.title}
-                    </h3>
-                    <p className="text-primary-foreground/80 leading-relaxed line-clamp-3">
-                      {project.description}
-                    </p>
-                    {/* Impact metrics */}
-                    <div className="flex items-center gap-4 text-primary-foreground/60 text-sm">
-                      <div className="flex items-center gap-1">
-                        <TrendingUp className="w-4 h-4" />
-                        <span>{project.details.impact.split(',')[0]}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Hover Popup */}
-                {/* This was the original hover popup location - removed to keep original modal-only behavior */}
-              </div>
-            ))}
-          </div>
+    <section id="projects" className="pt-4 md:pt-8 pb-20 hero-section relative">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-6xl lg:text-7xl font-bold tracking-tight text-center leading-tight mb-6">
+            Product <span className="text-[hsl(var(--secondary))]">Highlights</span>
+          </h2>
+          <p className="text-xl text-primary-foreground/80 leading-relaxed text-center max-w-2xl mx-auto">
+            Fast, focused, and validated.
+          </p>
         </div>
-      </section>
 
-      {/* Project Detail Modal */}
-      {selectedProject && (
-        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm animate-fade-in overflow-y-auto">
-          <div className="min-h-full flex items-center justify-center p-4">
-            <div className="relative w-full max-w-4xl my-8">
-              <div className="bg-gradient-to-br from-background to-background/95 rounded-3xl shadow-2xl border border-border/50 animate-scale-in max-h-[85vh] overflow-y-auto">
-                {/* Header */}
-                <div className="relative overflow-hidden rounded-t-3xl">
+        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {projects.map((project, index) => (
+            <div
+              key={project.id}
+              className="group cursor-pointer transform transition-all duration-500 hover:scale-105 relative"
+              onClick={() => handleProjectClick(project)}
+            >
+              <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-500">
+                <div className="relative overflow-hidden h-64">
                   <img
-                    src={selectedProject.image}
-                    alt={selectedProject.title}
-                    className="w-full h-64 object-cover"
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                  <button
-                    onClick={() => setSelectedProject(null)}
-                    className="absolute top-4 right-4 p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors"
-                  >
-                    <X className="w-6 h-6" />
-                  </button>
-                  <div className="absolute bottom-6 left-6 right-6 text-white">
-                    <h2 className="text-4xl font-bold mb-2">
-                      {selectedProject.title}
-                    </h2>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+
+                  <div className="absolute top-4 left-4 right-4">
                     <div className="flex flex-wrap gap-2">
-                      {selectedProject.tech.map((tech, index) => (
+                      {project.tech.slice(0, 3).map((tech, i) => (
                         <span
-                          key={index}
-                          className="px-3 py-1 bg-orange-500/90 backdrop-blur-sm text-white text-sm rounded-full border border-orange-400/50 font-medium shadow-sm"
+                          key={i}
+                          className="px-3 py-1 bg-orange-500/90 backdrop-blur-sm text-white text-xs rounded-full border border-orange-400/50 font-medium shadow-sm"
                         >
                           {tech}
                         </span>
                       ))}
                     </div>
                   </div>
+
+                  <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                    <div className="text-white text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                      <ExternalLink className="w-8 h-8 mx-auto mb-2" />
+                      <p className="text-sm font-medium">View Details</p>
+                    </div>
+                  </div>
                 </div>
-                {/* Modal content */}
-                <div className="p-8 space-y-8">
-                  {/* Overview */}
-                  <div className="grid md:grid-cols-3 gap-6">
-                    <div className="flex items-center gap-3">
-                      <div className="p-2 bg-primary/10 rounded-lg">
-                        <Users className="w-5 h-5 text-primary" />
-                      </div>
-                      <div>
-                        <p className="text-sm text-muted-foreground">Company</p>
-                        <p className="font-semibold">
-                          {selectedProject.details.company}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="p-2 bg-primary/10 rounded-lg">
-                        <Calendar className="w-5 h-5 text-primary" />
-                      </div>
-                      <div>
-                        <p className="text-sm text-muted-foreground">Duration</p>
-                        <p className="font-semibold">
-                          {selectedProject.details.duration}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3">
-                    <div className="p-2 bg-primary/10 rounded-lg">
-                        <Target className="w-5 h-5 text-primary" />
-                      </div>
-                      <div>
-                        <p className="text-sm text-muted-foreground">Role</p>
-                        <p className="font-semibold">
-                          {selectedProject.details.role}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  {/* Challenge & Solution */}
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div>
-                      <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                        <Target className="w-5 h-5 text-primary" /> Challenge
-                      </h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {selectedProject.details.challenge}
-                      </p>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                        <TrendingUp className="w-5 h-5 text-primary" /> Solution
-                      </h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {selectedProject.details.solution}
-                      </p>
-                    </div>
-                  </div>
-                  {/* Results */}
-                  <div>
-                    <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
-                      <Award className="w-5 h-5 text-primary" /> Key Results
-                    </h3>
-                    <div className="grid md:grid-cols-2 gap-4">
-                      {selectedProject.details.results.map((result, index) => (
-                        <div
-                          key={index}
-                          className="flex items-center gap-3 p-4 bg-primary/5 rounded-xl border border-primary/10"
-                        >
-                          <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0" />
-                          <p className="text-foreground">{result}</p>
-                        </div>
-                      ))}
+
+                <div className="p-8 space-y-4">
+                  <h3 className="text-2xl font-bold text-primary-foreground group-hover:text-secondary transition-colors duration-300">
+                    {project.title}
+                  </h3>
+                  <p className="text-primary-foreground/80 leading-relaxed line-clamp-3">
+                    {project.description}
+                  </p>
+                  <div className="flex items-center gap-4 text-primary-foreground/60 text-sm">
+                    <div className="flex items-center gap-1">
+                      <TrendingUp className="w-4 h-4" />
+                      <span>{project.details.impact.split(',')[0]}</span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          ))}
         </div>
+      </div>
+
+      {/* Centered Modal Overlay */}
+      {selectedProject && (
+        <>
+          {/* Background Overlay */}
+          <div 
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9998] transition-opacity duration-300"
+            onClick={closeModal}
+          />
+          
+          {/* Centered Modal */}
+          <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4">
+            <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-2xl shadow-2xl border border-gray-200/50 dark:border-gray-700/50 max-w-2xl w-full max-h-[80vh] overflow-y-auto transform transition-all duration-300 scale-100 opacity-100">
+              {/* Modal Header */}
+              <div className="sticky top-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm p-6 border-b border-gray-200/50 dark:border-gray-700/50 flex items-center justify-between">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  {selectedProject.title}
+                </h2>
+                <button
+                  onClick={closeModal}
+                  className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors duration-200"
+                >
+                  <X className="w-6 h-6 text-gray-500 dark:text-gray-400" />
+                </button>
+              </div>
+
+              {/* Modal Content - Keep original simple content */}
+              <div className="p-6 space-y-4">
+                <div className="text-sm text-gray-500 dark:text-gray-400 font-medium">
+                  {selectedProject.details.company} • {selectedProject.details.duration}
+                </div>
+                <p className="text-sm text-gray-700 dark:text-gray-300 line-clamp-3 leading-relaxed">
+                  {selectedProject.details.challenge}
+                </p>
+                <div className="pt-2 border-t border-gray-200/50 dark:border-gray-700/50">
+                  <span className="text-sm font-semibold text-orange-600 dark:text-orange-400">
+                    Impact: {selectedProject.details.impact}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </>
       )}
-    </>
+    </section>
   );
 };
 
