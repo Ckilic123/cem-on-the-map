@@ -88,6 +88,30 @@ const HeroSection: React.FC = () => {
                     Email
                   </a>
                 </Button>
+
+                <Button size="lg" variant="secondary" asChild className="min-w-[160px] h-12">
+                  <a
+                    href={cemCV}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2"
+                  >
+                    <FileText className="w-5 h-5" />
+                    Resume
+                  </a>
+                </Button>
+              </div>
+
+              {/* Journey CTA */}
+              <div className="pt-8">
+                <Button
+                  size="lg"
+                  onClick={() => setShowMap(true)}
+                  className="min-w-[220px] h-14 bg-primary hover:bg-primary/90 text-primary-foreground font-medium text-lg shadow-lg hover:shadow-xl transition-all duration-300 animate-cta-tilt-v2"
+                >
+                  <Compass className="w-6 h-6 mr-3" />
+                  Have a look at my journey
+                </Button>
               </div>
             </div>
 
@@ -109,33 +133,6 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom Section with Resume and Journey CTA */}
-        <div className="max-w-7xl w-full mx-auto">
-          <div className="flex flex-col items-center gap-8">
-            {/* Resume Button */}
-            <Button size="lg" variant="secondary" asChild className="min-w-[160px] h-12">
-              <a
-                href={cemCV}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2"
-              >
-                <FileText className="w-5 h-5" />
-                Resume
-              </a>
-            </Button>
-
-            {/* Journey CTA */}
-            <Button
-              size="lg"
-              onClick={() => setShowMap(true)}
-              className="min-w-[220px] h-14 bg-primary hover:bg-primary/90 text-primary-foreground font-medium text-lg shadow-lg hover:shadow-xl transition-all duration-300 animate-cta-tilt-v2"
-            >
-              <Compass className="w-6 h-6 mr-3" />
-              Have a look at my journey
-            </Button>
-          </div>
-        </div>
       </div>
     </section>
   );
