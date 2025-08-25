@@ -203,18 +203,19 @@
     transform: translateY(0);
   }
 
-/* Smooth up/down CTA animation - 2s movement, 8s pause */
+/* Slower, gentler up/down CTA animation with longer travel */
 @keyframes cta-float-v2 {
-  0%, 80%, 100% { transform: translateY(0px); }
-  5% { transform: translateY(-3px); }
-  10% { transform: translateY(3px); }
-  15% { transform: translateY(-2px); }
-  20% { transform: translateY(0px); }
+  0%, 85%, 100% { transform: translateY(0px); }
+  5% { transform: translateY(-8px); }
+  10% { transform: translateY(8px); }
+  15% { transform: translateY(-6px); }
+  20% { transform: translateY(4px); }
+  25% { transform: translateY(0px); }
 }
 
 .animate-cta-tilt-v2 {
   display: inline-block;
-  animation: cta-float-v2 10s ease-in-out infinite;
+  animation: cta-float-v2 15s ease-in-out infinite;
   will-change: transform;
 }
 
