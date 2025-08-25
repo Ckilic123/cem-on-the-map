@@ -164,30 +164,16 @@ const ProjectSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Modal - Fixed positioning to center */}
+      {/* Floating Hover Preview */}
       {selectedProject && (
-        <>
-          <div 
-            className="fixed inset-0 bg-black/50 z-50"
-            onClick={() => setSelectedProject(null)}
-          />
-          <div className="fixed inset-0 flex items-center justify-center z-50 p-4">
-            <div className="w-80 p-4 bg-background/95 rounded-xl shadow-2xl border border-border">
-              <div className="flex justify-between items-start mb-1">
-                <h4 className="text-lg font-bold">{selectedProject.title}</h4>
-                <button
-                  onClick={() => setSelectedProject(null)}
-                  className="ml-2"
-                >
-                  <X className="w-4 h-4" />
-                </button>
-              </div>
-              <p className="text-sm text-muted-foreground line-clamp-4">
-                {selectedProject.details.challenge}
-              </p>
-            </div>
+        <div className="fixed inset-0 flex items-center justify-center z-50">
+          <div className="w-80 p-4 bg-background/95 rounded-xl shadow-2xl border border-border animate-fade-in">
+            <h4 className="text-lg font-bold mb-1">{selectedProject.title}</h4>
+            <p className="text-sm text-muted-foreground line-clamp-4">
+              {selectedProject.details.challenge}
+            </p>
           </div>
-        </>
+        </div>
       )}
     </section>
   );
