@@ -42,7 +42,7 @@ const HeroSection: React.FC = () => {
       className="hero-section h-screen pt-0 pb-0 flex items-center justify-center transition-all duration-700 ease-in-out"
     >
       <div className="container mx-auto px-6 pt-8 pb-8 transition-all duration-500 ease-in-out">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-none mx-auto">
           {/* Main Content - Text Left, Photo Right */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center mb-12">
             {/* Text Content */}
