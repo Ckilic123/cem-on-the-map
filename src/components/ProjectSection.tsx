@@ -167,7 +167,7 @@ const ProjectSection: React.FC = () => {
       {/* Project Detail Modal */}
       {selectedProject && (
         <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm animate-fade-in overflow-y-auto">
-          <div className="min-h-full flex items-center justify-center p-4">
+          <div className="min-h-screen flex justify-center p-4 pt-16">
             <div className="relative w-full max-w-4xl my-8">
               <div className="bg-gradient-to-br from-background to-background/95 rounded-3xl shadow-2xl border border-border/50 animate-scale-in max-h-[85vh] overflow-y-auto">
                 {/* Header */}
