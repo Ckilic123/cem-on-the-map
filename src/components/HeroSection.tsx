@@ -39,12 +39,12 @@ const HeroSection: React.FC = () => {
   return (
     <section
       id="hero"
-      className="hero-section h-screen w-full pt-0 pb-0 flex items-center justify-center transition-all duration-700 ease-in-out"
+      className="hero-section h-screen w-full pt-0 pb-0 flex items-center justify-center transition-all duration-700 ease-in-out fixed top-0 left-0 z-0"
     >
       <div className="w-full h-full px-8 py-16 transition-all duration-500 ease-in-out flex flex-col justify-between">
         <div className="max-w-7xl w-full mx-auto flex-1 flex flex-col justify-center">
           {/* Main Content - Text Left, Photo Right */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             {/* Text Content */}
             <div className="lg:col-span-7 space-y-12">
               {/* Location */}
@@ -102,17 +102,6 @@ const HeroSection: React.FC = () => {
                 </Button>
               </div>
 
-              {/* Journey CTA */}
-              <div className="pt-8">
-                <Button
-                  size="lg"
-                  onClick={() => setShowMap(true)}
-                  className="min-w-[220px] h-14 bg-primary hover:bg-primary/90 text-primary-foreground font-medium text-lg shadow-lg hover:shadow-xl transition-all duration-300 animate-cta-tilt-v2"
-                >
-                  <Compass className="w-6 h-6 mr-3" />
-                  Have a look at my journey
-                </Button>
-              </div>
             </div>
 
             {/* Photo */}
@@ -133,6 +122,17 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
 
+        {/* Journey CTA - Bottom Center */}
+        <div className="max-w-7xl w-full mx-auto flex justify-center pb-8">
+          <Button
+            size="lg"
+            onClick={() => setShowMap(true)}
+            className="min-w-[220px] h-14 bg-primary hover:bg-primary/90 text-primary-foreground font-medium text-lg shadow-lg hover:shadow-xl transition-all duration-300 animate-cta-tilt-v2"
+          >
+            <Compass className="w-6 h-6 mr-3" />
+            Have a look at my journey
+          </Button>
+        </div>
       </div>
     </section>
   );

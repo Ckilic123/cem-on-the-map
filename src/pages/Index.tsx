@@ -6,11 +6,13 @@ import SimpleFooter from '@/components/SimpleFooter';
 
 export default function IndexPage() {
   return (
-    <div className="page-scale">
+    <div className="relative">
       <Navigation />
       <HeroSection />
-      <ProjectSection />
-      <SimpleFooter />
+      <div className="relative z-10 mt-[100vh]">
+        <ProjectSection />
+        <SimpleFooter />
+      </div>
     </div>
   );
 }
