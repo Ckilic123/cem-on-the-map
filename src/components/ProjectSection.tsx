@@ -93,7 +93,8 @@ const projects = [
 ];
 
 const ProjectSection: React.FC = () => {
-  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
+  const [hoveredProject, setHoveredProject] = useState<typeof projects[0] | null>(null);
+  const [cursor, setCursor] = useState({ x: 0, y: 0 });
 
   return (
     <section id="projects" className="pt-4 md:pt-8 pb-20 hero-section relative">
@@ -112,7 +113,11 @@ const ProjectSection: React.FC = () => {
             <div
               key={project.id}
               className="group cursor-pointer transform transition-all duration-500 hover:scale-105 relative"
-              onClick={() => setSelectedProject(project)}
+              onMouseEnter={() => setHoveredProject(project)}
+              onMouseLeave={() => setHoveredProject(null)}
+              onMouseMove={(e) =>
+                setCursor({ x: e.clientX + 20, y: e.clientY - 30 })
+              }
             >
               <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-500">
                 <div className="relative overflow-hidden h-64">
@@ -165,14 +170,19 @@ const ProjectSection: React.FC = () => {
       </div>
 
       {/* Floating Hover Preview */}
-      {selectedProject && (
-        <div className="fixed inset-0 flex items-center justify-center z-50">
-          <div className="w-80 p-4 bg-background/95 rounded-xl shadow-2xl border border-border animate-fade-in">
-            <h4 className="text-lg font-bold mb-1">{selectedProject.title}</h4>
-            <p className="text-sm text-muted-foreground line-clamp-4">
-              {selectedProject.details.challenge}
-            </p>
-          </div>
+      {hoveredProject && (
+        <div
+          className="fixed z-50 w-80 p-4 bg-background/95 rounded-xl shadow-2xl border border-border animate-fade-in"
+          style={{
+            top: `${cursor.y}px`,
+            left: `${cursor.x}px`,
+            pointerEvents: 'none',
+          }}
+        >
+          <h4 className="text-lg font-bold mb-1">{hoveredProject.title}</h4>
+          <p className="text-sm text-muted-foreground line-clamp-4">
+            {hoveredProject.details.challenge}
+          </p>
         </div>
       )}
     </section>
